@@ -1064,12 +1064,8 @@ public class TemCalGUI{
 	            
 	        	getDefaultvarparFromTEM();
 	            
-	            // reset the pick-pft list and default index
-	            pickpftCB.setSelectedIndex(Caliber.ipft);
-//		    	double[] vegcov = Caliber.eqrunner.runcht.cht.getCd().getM_veg().getVegcov();
-//		    	for (int ip=ConstCohort.NUM_PFT-1; ip>=0; ip++) {
-//		    		if (vegcov[ip]<=0.) pickpftCB.removeItemAt(ip);
-//		    	}
+	            // set the pick-pft list and default index
+	            pickpftCB.setSelectedIndex(Caliber.ipft); // Caliber.ipft has already set 
 
 			}
 		}
@@ -1177,7 +1173,7 @@ public class TemCalGUI{
 
 	            startpauseB.setEnabled(true);
 	            
-	            pickpftCB.setEnabled(true);
+	            //pickpftCB.setEnabled(true); // this will be enabled when it is selected
 	            
 		    } catch (Exception e){
 		    	JOptionPane.showMessageDialog(fcontrol, " model setup failed!");
@@ -1456,19 +1452,24 @@ public class TemCalGUI{
 			public void actionPerformed(ActionEvent arg0) {
 
 				// store the current par
+				int prepft = Caliber.ipft;
 				saveoldpar(); 
-				if (pickpftCB.isEnabled()) {
-					getCalparFromChangerToTable(Caliber.ipft);  //back-up current changer to table
+				if (pickpftCB.isEnabled()) {					
+					getCalparFromChangerToTable(Caliber.ipft);  
+					//back-up current changer to table, here Caliber.ipft is the old one
 				} else { // if pft scroll control not enable yet 
 					pickpftCB.setEnabled(true);
 				}
 				
 				// new PFT
-				Caliber.ipft = pickpftCB.getSelectedIndex();
-				assignCalparTableToChanger(Caliber.ipft);					
-				 		
-				setTEMcalparsFromChanger();
-				
+				int newpft = pickpftCB.getSelectedIndex();
+				int err=assignCalparTableToChanger(newpft);					
+				if (err==0){
+					Caliber.ipft = newpft;
+					setTEMcalparsFromChanger();
+				} else {
+		            pickpftCB.setSelectedIndex(prepft); // set it back 
+				}
 			}
 	}
 
@@ -1877,7 +1878,7 @@ public class TemCalGUI{
 		};
 
 		// pass the parameters from config-Tab in Control Pannel to changers in Calibration Pannel
-		private void assignCalparTableToChanger(int ipft){
+		private int assignCalparTableToChanger(int ipft){
 			
 			try {
 
@@ -1907,7 +1908,10 @@ public class TemCalGUI{
 
 			} catch (Exception e){
 		    	JOptionPane.showMessageDialog(fcontrol, " assigning Calibration parameters to Changer failed");
+		    	return -1;
 		    }
+			
+			return 0;
 
 		}
 
