@@ -1656,6 +1656,8 @@ public class TemCalGUI{
 			    	dummy = input.readLine();
 			    	element = dummy.split("\\s+");
 			    	targetTB.setValueAt(element[0].trim(), Configurer.I_AVLNt, 1);
+			    	
+			    	input.close();
 			    }
 
 		    } catch (Exception e){
@@ -2182,7 +2184,7 @@ public class TemCalGUI{
 			Caliber.jvcalpar.setFrg(frg);
 	
 			//soil
-			Caliber.jscalpar.setMicbnup(krblChanger.getValue());
+			Caliber.jscalpar.setMicbnup(micbnupChanger.getValue());
 	
 			Caliber.jscalpar.setKdcmoss(kdcmosscChanger.getValue());
 			Caliber.jscalpar.setKdcrawc(kdcrawcChanger.getValue());
@@ -2299,6 +2301,10 @@ public class TemCalGUI{
 			//output calibrated parameters
 			try {
 			      
+				// first save the 'Changers' values to Table's value
+				assignTEMcalparsFromChangerToTable();
+				
+				//
 				PrintStream output = new PrintStream(new FileOutputStream(config.outparfile));  // this is the output file
 
 			    BufferedReader input =  new BufferedReader(new FileReader(config.iniparfile));  // for getting comments
@@ -2424,6 +2430,40 @@ public class TemCalGUI{
 			 }
 
 		}
+		
+		private void assignTEMcalparsFromChangerToTable(){
+			
+			//veg.
+			calparTB.setValueAt(cmaxChanger.getValue(), Configurer.I_CMAX, Caliber.ipft+1);
+			calparTB.setValueAt(nmaxChanger.getValue(), Configurer.I_NMAX, Caliber.ipft+1);
+	
+			calparTB.setValueAt(cfalllChanger.getValue(), Configurer.I_CFALLL, Caliber.ipft+1);
+			calparTB.setValueAt(cfallsChanger.getValue(), Configurer.I_CFALLS, Caliber.ipft+1);
+			calparTB.setValueAt(cfallrChanger.getValue(), Configurer.I_CFALLR, Caliber.ipft+1);
+	
+			calparTB.setValueAt(nfalllChanger.getValue(), Configurer.I_NFALLL, Caliber.ipft+1);
+			calparTB.setValueAt(nfallsChanger.getValue(), Configurer.I_NFALLS, Caliber.ipft+1);
+			calparTB.setValueAt(nfallrChanger.getValue(), Configurer.I_NFALLR, Caliber.ipft+1);
+	
+			calparTB.setValueAt(kraChanger.getValue(), Configurer.I_KRA, Caliber.ipft+1);
+			
+			calparTB.setValueAt(krblChanger.getValue(), Configurer.I_KRBL, Caliber.ipft+1);
+			calparTB.setValueAt(krbsChanger.getValue(), Configurer.I_KRBS, Caliber.ipft+1);
+			calparTB.setValueAt(krbrChanger.getValue(), Configurer.I_KRBR, Caliber.ipft+1);
+	
+			calparTB.setValueAt(frgChanger.getValue(), Configurer.I_FRG, Caliber.ipft+1);
+	
+			//soil
+			calparTB.setValueAt(micbnupChanger.getValue(), Configurer.I_MICBNUP, 1);
+	
+			calparTB.setValueAt(kdcmosscChanger.getValue(), Configurer.I_KDCMOSS, 1);
+			calparTB.setValueAt(kdcrawcChanger.getValue(), Configurer.I_KDCRAWC, 1);
+			calparTB.setValueAt(kdcsomaChanger.getValue(), Configurer.I_KDCSOMA, 1);
+			calparTB.setValueAt(kdcsomprChanger.getValue(), Configurer.I_KDCSOMPR, 1);
+			calparTB.setValueAt(kdcsomcrChanger.getValue(), Configurer.I_KDCSOMCR, 1);
+		
+		};
+
 
 	};
 

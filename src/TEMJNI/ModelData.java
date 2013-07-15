@@ -399,6 +399,22 @@ public class ModelData {
     return temcoreJNI.ModelData_act_clmno_get(swigCPtr, this);
   }
 
+  public void setAct_clmyr_beg(int value) {
+    temcoreJNI.ModelData_act_clmyr_beg_set(swigCPtr, this, value);
+  }
+
+  public int getAct_clmyr_beg() {
+    return temcoreJNI.ModelData_act_clmyr_beg_get(swigCPtr, this);
+  }
+
+  public void setAct_clmyr_end(int value) {
+    temcoreJNI.ModelData_act_clmyr_end_set(swigCPtr, this, value);
+  }
+
+  public int getAct_clmyr_end() {
+    return temcoreJNI.ModelData_act_clmyr_end_get(swigCPtr, this);
+  }
+
   public void setAct_clmyr(int value) {
     temcoreJNI.ModelData_act_clmyr_set(swigCPtr, this, value);
   }

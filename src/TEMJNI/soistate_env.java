@@ -35,6 +35,14 @@ public class soistate_env {
     }
   }
 
+  public void setFrozen(double[] value) {
+    temcoreJNI.soistate_env_frozen_set(swigCPtr, this, value);
+  }
+
+  public double[] getFrozen() {
+    return temcoreJNI.soistate_env_frozen_get(swigCPtr, this);
+  }
+
   public void setFrozenfrac(double[] value) {
     temcoreJNI.soistate_env_frozenfrac_set(swigCPtr, this, value);
   }

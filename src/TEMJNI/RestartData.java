@@ -426,6 +426,14 @@ public class RestartData {
     return temcoreJNI.RestartData_ICEsoil_get(swigCPtr, this);
   }
 
+  public void setFROZENsoil(int[] value) {
+    temcoreJNI.RestartData_FROZENsoil_set(swigCPtr, this, value);
+  }
+
+  public int[] getFROZENsoil() {
+    return temcoreJNI.RestartData_FROZENsoil_get(swigCPtr, this);
+  }
+
   public void setFROZENFRACsoil(double[] value) {
     temcoreJNI.RestartData_FROZENFRACsoil_set(swigCPtr, this, value);
   }

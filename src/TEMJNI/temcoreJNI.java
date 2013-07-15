@@ -441,6 +441,8 @@ class temcoreJNI {
   public final static native double[] RestartData_LIQsoil_get(long jarg1, RestartData jarg1_);
   public final static native void RestartData_ICEsoil_set(long jarg1, RestartData jarg1_, double[] jarg2);
   public final static native double[] RestartData_ICEsoil_get(long jarg1, RestartData jarg1_);
+  public final static native void RestartData_FROZENsoil_set(long jarg1, RestartData jarg1_, int[] jarg2);
+  public final static native int[] RestartData_FROZENsoil_get(long jarg1, RestartData jarg1_);
   public final static native void RestartData_FROZENFRACsoil_set(long jarg1, RestartData jarg1_, double[] jarg2);
   public final static native double[] RestartData_FROZENFRACsoil_get(long jarg1, RestartData jarg1_);
   public final static native void RestartData_TEXTUREsoil_set(long jarg1, RestartData jarg1_, int[] jarg2);
@@ -1065,6 +1067,8 @@ class temcoreJNI {
   public final static native long soistate_dim_frootfrac_get(long jarg1, soistate_dim jarg1_);
   public final static native long new_soistate_dim();
   public final static native void delete_soistate_dim(long jarg1);
+  public final static native void soistate_env_frozen_set(long jarg1, soistate_env jarg1_, double[] jarg2);
+  public final static native double[] soistate_env_frozen_get(long jarg1, soistate_env jarg1_);
   public final static native void soistate_env_frozenfrac_set(long jarg1, soistate_env jarg1_, double[] jarg2);
   public final static native double[] soistate_env_frozenfrac_get(long jarg1, soistate_env jarg1_);
   public final static native void soistate_env_ts_set(long jarg1, soistate_env jarg1_, double[] jarg2);
@@ -2006,6 +2010,10 @@ class temcoreJNI {
   public final static native int ModelData_act_initchtno_get(long jarg1, ModelData jarg1_);
   public final static native void ModelData_act_clmno_set(long jarg1, ModelData jarg1_, int jarg2);
   public final static native int ModelData_act_clmno_get(long jarg1, ModelData jarg1_);
+  public final static native void ModelData_act_clmyr_beg_set(long jarg1, ModelData jarg1_, int jarg2);
+  public final static native int ModelData_act_clmyr_beg_get(long jarg1, ModelData jarg1_);
+  public final static native void ModelData_act_clmyr_end_set(long jarg1, ModelData jarg1_, int jarg2);
+  public final static native int ModelData_act_clmyr_end_get(long jarg1, ModelData jarg1_);
   public final static native void ModelData_act_clmyr_set(long jarg1, ModelData jarg1_, int jarg2);
   public final static native int ModelData_act_clmyr_get(long jarg1, ModelData jarg1_);
   public final static native void ModelData_act_vegno_set(long jarg1, ModelData jarg1_, int jarg2);
