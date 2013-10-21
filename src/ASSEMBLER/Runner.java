@@ -462,7 +462,7 @@ public class Runner {
 			}
 
 			//getting the cohort data for current cohort
-			error = runcht.readData(true);
+			error = runcht.readData();
 			if (error!=0){
 				System.out.println("problem in reading grided data in Runner::run_siter \n");
 				System.exit(-1);
@@ -528,7 +528,7 @@ public class Runner {
 				}
 
 				//getting the cohort data for current cohort
-				error = runcht.readData(true);
+				error = runcht.readData();
 				if (error!=0){
 					System.out.println("problem in reading grided data in Runner::run_regner \n");
 					System.exit(-1);

@@ -84,7 +84,7 @@ public class TEMeqrunner implements Runnable{
 			}
 				
 			//getting the cohort data
-			error = eqrunner.runcht.readData(false);
+			error = eqrunner.runcht.readData();
 
 			error = eqrunner.runcht.reinit();
 
