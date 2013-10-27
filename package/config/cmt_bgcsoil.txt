@@ -34,7 +34,7 @@ CMT30 // Lowland Black Spruce Forests  - soil microbial activity (BGC) parameter
 29.73             // nmincnsoil:
 0.2               // propftos:
 0.0               // fnloss:  fraction N leaching (0 - 1) when drainage occurs
-178               // initdmossc:
+0.0               // initdmossc:
 1783              // initshlwc:
 5021              // initdeepc:
 9000              // initminec:

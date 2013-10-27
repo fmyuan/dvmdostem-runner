@@ -23,7 +23,6 @@ import DATA.ConstCohort;
 
 import ASSEMBLER.Runner;
 import ASSEMBLER.TEMeqrunner;
-import TEMJNI.soipar_bgc;
 import TEMJNI.soipar_cal;
 import TEMJNI.vegpar_cal;
 
@@ -2169,7 +2168,7 @@ public class TemCalGUI{
 			nfall[0]=nfalllChanger.getValue();
 			nfall[1]=nfallsChanger.getValue();
 			nfall[2]=nfallrChanger.getValue();
-			Caliber.jvcalpar.setCfall(nfall);
+			Caliber.jvcalpar.setNfall(nfall);
 	
 			double kra = kraChanger.getValue();
 			Caliber.jvcalpar.setKra(kra);
@@ -2194,7 +2193,7 @@ public class TemCalGUI{
 	
 			//pass the parameters to c++ holders
 			int ipft = Caliber.ipft;
-			Caliber.temcj.setVbCalPar1pft(ipft, Caliber.jvcalpar);
+			Caliber.temcj.setVbCalPar1pft(ipft, Caliber.jvcalpar);			
 			Caliber.temcj.setSbCalPar(Caliber.jscalpar);
 	
 		};

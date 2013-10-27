@@ -1,6 +1,6 @@
 //===========================================================
 CMT00 // Default TEM Community - (max. 10 PFTs) (BGC) Plant physiological parameters and default initial conditions
-//PFT0       PFT1         PFT2         PFT3         PFT4         PFT5         PFT6         PFT7         PFT8         PFT9         // names: comments                  
+//PFT0       PFT1         PFT2         PFT3         PFT4         PFT5         PFT6         PFT7         PFT8         PFT9         // names: comments
 400.0        400.0        400.0        400.0        400.0        400.0        400.0        400.0        400.0        400.0        // kc:
 75           75           75           75           75           75           75           75           75           75           // ki:
 -8.0         -8.0        -8.0         -8.0         -8.0         -8.0         -8.0         -8.0         -8.0         -8.0          // tmin:
@@ -36,7 +36,8 @@ CMT00 // Default TEM Community - (max. 10 PFTs) (BGC) Plant physiological parame
 0.0          0.0          0.0          0.0          0.0          0.0          0.0          0.0          0.0          0.0          // initdeadn:
 //===========================================================
 CMT30 // Lowland Black Spruce Forests - (max. 10 PFTs) (BGC) Plant physiological parameters and default initial conditions
-//Spruce     Moss        PFT2        PFT3         PFT4         PFT5         PFT6         PFT7         PFT8         PFT9        400.0        400.0        400.0        400.0        400.0        400.0        400.0        400.0        400.0        400.0        // kc:
+//Spruce     Moss        PFT2        PFT3         PFT4         PFT5         PFT6         PFT7         PFT8         PFT9
+400.0        400.0        400.0        400.0        400.0        400.0        400.0        400.0        400.0        400.0        // kc:
 75           75           75           75           75           75           75           75           75           75           // ki:
 -8.0         -8.0        -8.0         -8.0         -8.0         -8.0         -8.0         -8.0         -8.0         -8.0          // tmin:
 14.2         14.2         14.2         14.2         14.2         14.2         14.2         14.2         14.2         14.2         // toptmin:
