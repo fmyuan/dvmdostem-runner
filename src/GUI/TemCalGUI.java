@@ -2433,33 +2433,33 @@ public class TemCalGUI{
 		private void assignTEMcalparsFromChangerToTable(){
 			
 			//veg.
-			calparTB.setValueAt(cmaxChanger.getValue(), Configurer.I_CMAX, Caliber.ipft+1);
-			calparTB.setValueAt(nmaxChanger.getValue(), Configurer.I_NMAX, Caliber.ipft+1);
+			calparTB.setValueAt(String.valueOf(cmaxChanger.getValue()), Configurer.I_CMAX, Caliber.ipft+1);
+			calparTB.setValueAt(String.valueOf(nmaxChanger.getValue()), Configurer.I_NMAX, Caliber.ipft+1);
 	
-			calparTB.setValueAt(cfalllChanger.getValue(), Configurer.I_CFALLL, Caliber.ipft+1);
-			calparTB.setValueAt(cfallsChanger.getValue(), Configurer.I_CFALLS, Caliber.ipft+1);
-			calparTB.setValueAt(cfallrChanger.getValue(), Configurer.I_CFALLR, Caliber.ipft+1);
+			calparTB.setValueAt(String.valueOf(cfalllChanger.getValue()), Configurer.I_CFALLL, Caliber.ipft+1);
+			calparTB.setValueAt(String.valueOf(cfallsChanger.getValue()), Configurer.I_CFALLS, Caliber.ipft+1);
+			calparTB.setValueAt(String.valueOf(cfallrChanger.getValue()), Configurer.I_CFALLR, Caliber.ipft+1);
 	
-			calparTB.setValueAt(nfalllChanger.getValue(), Configurer.I_NFALLL, Caliber.ipft+1);
-			calparTB.setValueAt(nfallsChanger.getValue(), Configurer.I_NFALLS, Caliber.ipft+1);
-			calparTB.setValueAt(nfallrChanger.getValue(), Configurer.I_NFALLR, Caliber.ipft+1);
+			calparTB.setValueAt(String.valueOf(nfalllChanger.getValue()), Configurer.I_NFALLL, Caliber.ipft+1);
+			calparTB.setValueAt(String.valueOf(nfallsChanger.getValue()), Configurer.I_NFALLS, Caliber.ipft+1);
+			calparTB.setValueAt(String.valueOf(nfallrChanger.getValue()), Configurer.I_NFALLR, Caliber.ipft+1);
 	
-			calparTB.setValueAt(kraChanger.getValue(), Configurer.I_KRA, Caliber.ipft+1);
+			calparTB.setValueAt(String.valueOf(kraChanger.getValue()), Configurer.I_KRA, Caliber.ipft+1);
 			
-			calparTB.setValueAt(krblChanger.getValue(), Configurer.I_KRBL, Caliber.ipft+1);
-			calparTB.setValueAt(krbsChanger.getValue(), Configurer.I_KRBS, Caliber.ipft+1);
-			calparTB.setValueAt(krbrChanger.getValue(), Configurer.I_KRBR, Caliber.ipft+1);
+			calparTB.setValueAt(String.valueOf(krblChanger.getValue()), Configurer.I_KRBL, Caliber.ipft+1);
+			calparTB.setValueAt(String.valueOf(krbsChanger.getValue()), Configurer.I_KRBS, Caliber.ipft+1);
+			calparTB.setValueAt(String.valueOf(krbrChanger.getValue()), Configurer.I_KRBR, Caliber.ipft+1);
 	
-			calparTB.setValueAt(frgChanger.getValue(), Configurer.I_FRG, Caliber.ipft+1);
+			calparTB.setValueAt(String.valueOf(frgChanger.getValue()), Configurer.I_FRG, Caliber.ipft+1);
 	
 			//soil
-			calparTB.setValueAt(micbnupChanger.getValue(), Configurer.I_MICBNUP, 1);
+			calparTB.setValueAt(String.valueOf(micbnupChanger.getValue()), Configurer.I_MICBNUP, 1);
 	
-			calparTB.setValueAt(kdcmosscChanger.getValue(), Configurer.I_KDCMOSS, 1);
-			calparTB.setValueAt(kdcrawcChanger.getValue(), Configurer.I_KDCRAWC, 1);
-			calparTB.setValueAt(kdcsomaChanger.getValue(), Configurer.I_KDCSOMA, 1);
-			calparTB.setValueAt(kdcsomprChanger.getValue(), Configurer.I_KDCSOMPR, 1);
-			calparTB.setValueAt(kdcsomcrChanger.getValue(), Configurer.I_KDCSOMCR, 1);
+			calparTB.setValueAt(String.valueOf(kdcmosscChanger.getValue()), Configurer.I_KDCMOSS, 1);
+			calparTB.setValueAt(String.valueOf(kdcrawcChanger.getValue()), Configurer.I_KDCRAWC, 1);
+			calparTB.setValueAt(String.valueOf(kdcsomaChanger.getValue()), Configurer.I_KDCSOMA, 1);
+			calparTB.setValueAt(String.valueOf(kdcsomprChanger.getValue()), Configurer.I_KDCSOMPR, 1);
+			calparTB.setValueAt(String.valueOf(kdcsomcrChanger.getValue()), Configurer.I_KDCSOMCR, 1);
 		
 		};
 
