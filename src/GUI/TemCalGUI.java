@@ -1200,7 +1200,8 @@ public class TemCalGUI{
 	    private void getDefaultvarparFromTEM(){
 	    	try {
 	    		//Calibratible parameters
-	    		double[] vegcov = Caliber.eqrunner.runcht.cht.getCd().getM_veg().getVegcov();
+		    	double[] vegcov = new double[ConstCohort.NUM_PFT];
+		    	vegcov = Caliber.eqrunner.runcht.cht.getChtlu().getVegcov().clone();	    	
 				vegpar_cal dumvpar = new vegpar_cal();
 				soipar_cal dumspar = new soipar_cal();
 	    		
@@ -1539,7 +1540,8 @@ public class TemCalGUI{
 			    	JOptionPane.showMessageDialog(fcontrol, status+" not exist");
 			    } else {
 
-			    	double[] vegcov = Caliber.eqrunner.runcht.cht.getCd().getM_veg().getVegcov();
+			    	double[] vegcov = new double[ConstCohort.NUM_PFT];
+			    	vegcov = Caliber.eqrunner.runcht.cht.getChtlu().getVegcov().clone();	    	
 			    	
 			    	//reading data from file
 			    	BufferedReader input =  new BufferedReader(new FileReader(config.calibgcfile));
@@ -1736,7 +1738,8 @@ public class TemCalGUI{
 
 			    }else{
 
-			    	double[] vegcov = Caliber.eqrunner.runcht.cht.getCd().getM_veg().getVegcov();
+			    	double[] vegcov = new double[ConstCohort.NUM_PFT];
+			    	vegcov = Caliber.eqrunner.runcht.cht.getChtlu().getVegcov().clone();	    	
 
 			    	//reading data from calibratable par file
 
@@ -1919,7 +1922,8 @@ public class TemCalGUI{
 		//pass the parameters from config-Tab of Control Panel to TEM model
 		private void setTEMparsFromTable(){
 	    	
-			double[] vegcov = Caliber.eqrunner.runcht.cht.getCd().getM_veg().getVegcov();
+	    	double[] vegcov = new double[ConstCohort.NUM_PFT];
+	    	vegcov = Caliber.eqrunner.runcht.cht.getChtlu().getVegcov().clone();	    	
 			vegpar_cal dvcalpar = new vegpar_cal();
 			soipar_cal dscalpar = new soipar_cal();
 			
@@ -2076,7 +2080,8 @@ public class TemCalGUI{
 	private void setTEMinitstateFromTable(){
 
 		// vegetation
-		double[] vegcov = Caliber.eqrunner.runcht.cht.getCd().getM_veg().getVegcov();
+    	double[] vegcov = new double[ConstCohort.NUM_PFT];
+    	vegcov = Caliber.eqrunner.runcht.cht.getChtlu().getVegcov().clone();	    	
 		for (int ip=0; ip<ConstCohort.NUM_PFT; ip++) {
 	      double dummy[] = new double[3]; 
 	      

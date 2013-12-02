@@ -1,6 +1,7 @@
 package ASSEMBLER;
 
 //from java
+import DATA.ConstCohort;
 import DATA.ConstTime;
 
 //GUI
@@ -99,7 +100,8 @@ public class TEMeqrunner implements Runnable{
 
 			//getting the default pft index (first PFT with vegcov > 0)
 			ipft = 0;
-	    	double[] vegcov = eqrunner.runcht.cht.getCd().getM_veg().getVegcov();	    	
+	    	double[] vegcov = new double[ConstCohort.NUM_PFT];
+	    	vegcov = eqrunner.runcht.cht.getChtlu().getVegcov().clone();	    	
 	    	while (vegcov[ipft]<=0.0) {
 	    		ipft+=1;
 	    	}
