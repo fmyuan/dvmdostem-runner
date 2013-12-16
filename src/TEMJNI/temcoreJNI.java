@@ -126,6 +126,14 @@ public class temcoreJNI {
   public final static native float[] CohortData_nirr_get(long jarg1, CohortData jarg1_);
   public final static native void CohortData_vapo_set(long jarg1, CohortData jarg1_, float[] jarg2);
   public final static native float[] CohortData_vapo_get(long jarg1, CohortData jarg1_);
+  public final static native void CohortData_d_tair_set(long jarg1, CohortData jarg1_, float[] jarg2);
+  public final static native float[] CohortData_d_tair_get(long jarg1, CohortData jarg1_);
+  public final static native void CohortData_d_prec_set(long jarg1, CohortData jarg1_, float[] jarg2);
+  public final static native float[] CohortData_d_prec_get(long jarg1, CohortData jarg1_);
+  public final static native void CohortData_d_nirr_set(long jarg1, CohortData jarg1_, float[] jarg2);
+  public final static native float[] CohortData_d_nirr_get(long jarg1, CohortData jarg1_);
+  public final static native void CohortData_d_vapo_set(long jarg1, CohortData jarg1_, float[] jarg2);
+  public final static native float[] CohortData_d_vapo_get(long jarg1, CohortData jarg1_);
   public final static native void CohortData_d_veg_set(long jarg1, CohortData jarg1_, long jarg2, vegstate_dim jarg2_);
   public final static native long CohortData_d_veg_get(long jarg1, CohortData jarg1_);
   public final static native void CohortData_m_veg_set(long jarg1, CohortData jarg1_, long jarg2, vegstate_dim jarg2_);
@@ -905,7 +913,7 @@ public class temcoreJNI {
   public final static native int NUMEQ_VEG_get();
   public final static native int NUMEQ_SOI_get();
   public final static native int NUMEQ_get();
-  public final static native int DYINY_get();
+  public final static native int DINY_get();
   public final static native int MINY_get();
   public final static native int[] DINM_get();
   public final static native int[] DOYINDFST_get();
@@ -2016,6 +2024,8 @@ public class temcoreJNI {
   public final static native int ModelData_act_clmyr_end_get(long jarg1, ModelData jarg1_);
   public final static native void ModelData_act_clmyr_set(long jarg1, ModelData jarg1_, int jarg2);
   public final static native int ModelData_act_clmyr_get(long jarg1, ModelData jarg1_);
+  public final static native void ModelData_act_clmstep_set(long jarg1, ModelData jarg1_, int jarg2);
+  public final static native int ModelData_act_clmstep_get(long jarg1, ModelData jarg1_);
   public final static native void ModelData_act_vegno_set(long jarg1, ModelData jarg1_, int jarg2);
   public final static native int ModelData_act_vegno_get(long jarg1, ModelData jarg1_);
   public final static native void ModelData_act_vegset_set(long jarg1, ModelData jarg1_, int jarg2);

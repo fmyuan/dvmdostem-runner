@@ -423,6 +423,14 @@ public class ModelData {
     return temcoreJNI.ModelData_act_clmyr_get(swigCPtr, this);
   }
 
+  public void setAct_clmstep(int value) {
+    temcoreJNI.ModelData_act_clmstep_set(swigCPtr, this, value);
+  }
+
+  public int getAct_clmstep() {
+    return temcoreJNI.ModelData_act_clmstep_get(swigCPtr, this);
+  }
+
   public void setAct_vegno(int value) {
     temcoreJNI.ModelData_act_vegno_set(swigCPtr, this, value);
   }

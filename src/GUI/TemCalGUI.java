@@ -6,9 +6,7 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import java.io.BufferedReader;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
@@ -20,7 +18,6 @@ import javax.swing.event.*;
 
 //
 import DATA.ConstCohort;
-
 import ASSEMBLER.Runner;
 import ASSEMBLER.TEMeqrunner;
 import TEMJNI.soipar_cal;
@@ -102,7 +99,7 @@ public class TemCalGUI{
     JTextField cmtcodeTF = new JTextField();
     JTextField pftcodeTF = new JTextField();
       
-    JComboBox pickpftCB;
+    JComboBox<Integer> pickpftCB;
 
     JTable calparTB;
     JTable stateTB;
@@ -695,7 +692,7 @@ public class TemCalGUI{
 				for (int i=0; i<Configurer.I_PFT.length; i++) {
 					pftindxV.add(Integer.valueOf(Configurer.I_PFT[i]));
 				}
-				pickpftCB = new JComboBox(pftindxV);
+				pickpftCB = new JComboBox<Integer>(pftindxV);
 				pickpftCB.setPreferredSize(new Dimension(90, 25));
 				slayout.putConstraint(SpringLayout.NORTH, pickpftCB, 155,SpringLayout.NORTH, caliP);
 				slayout.putConstraint(SpringLayout.WEST,pickpftCB, 250,SpringLayout.WEST, caliP);
@@ -1200,7 +1197,8 @@ public class TemCalGUI{
 	    private void getDefaultvarparFromTEM(){
 	    	try {
 	    		//Calibratible parameters
-	    		double[] vegcov = Caliber.eqrunner.runcht.cht.getCd().getM_veg().getVegcov();
+		    	double[] vegcov = new double[ConstCohort.NUM_PFT];
+		    	vegcov = Caliber.eqrunner.runcht.cht.getChtlu().getVegcov().clone();	    	
 				vegpar_cal dumvpar = new vegpar_cal();
 				soipar_cal dumspar = new soipar_cal();
 	    		
@@ -1227,7 +1225,7 @@ public class TemCalGUI{
 	    				calparTB.setValueAt(Double.toString(dumvpar.getKrb()[2]), Configurer.I_KRBR, ipft+1);
 	    				calparTB.setValueAt(Double.toString(dumvpar.getFrg()), Configurer.I_FRG, ipft+1);
 	    			
-	    			}
+	    			}	    			
 
 	    		}
 	    		
@@ -1539,7 +1537,8 @@ public class TemCalGUI{
 			    	JOptionPane.showMessageDialog(fcontrol, status+" not exist");
 			    } else {
 
-			    	double[] vegcov = Caliber.eqrunner.runcht.cht.getCd().getM_veg().getVegcov();
+			    	double[] vegcov = new double[ConstCohort.NUM_PFT];
+			    	vegcov = Caliber.eqrunner.runcht.cht.getChtlu().getVegcov().clone();	    	
 			    	
 			    	//reading data from file
 			    	BufferedReader input =  new BufferedReader(new FileReader(config.calibgcfile));
@@ -1736,7 +1735,8 @@ public class TemCalGUI{
 
 			    }else{
 
-			    	double[] vegcov = Caliber.eqrunner.runcht.cht.getCd().getM_veg().getVegcov();
+			    	double[] vegcov = new double[ConstCohort.NUM_PFT];
+			    	vegcov = Caliber.eqrunner.runcht.cht.getChtlu().getVegcov().clone();	    	
 
 			    	//reading data from calibratable par file
 
@@ -1919,7 +1919,8 @@ public class TemCalGUI{
 		//pass the parameters from config-Tab of Control Panel to TEM model
 		private void setTEMparsFromTable(){
 	    	
-			double[] vegcov = Caliber.eqrunner.runcht.cht.getCd().getM_veg().getVegcov();
+	    	double[] vegcov = new double[ConstCohort.NUM_PFT];
+	    	vegcov = Caliber.eqrunner.runcht.cht.getChtlu().getVegcov().clone();	    	
 			vegpar_cal dvcalpar = new vegpar_cal();
 			soipar_cal dscalpar = new soipar_cal();
 			
@@ -2076,7 +2077,8 @@ public class TemCalGUI{
 	private void setTEMinitstateFromTable(){
 
 		// vegetation
-		double[] vegcov = Caliber.eqrunner.runcht.cht.getCd().getM_veg().getVegcov();
+    	double[] vegcov = new double[ConstCohort.NUM_PFT];
+    	vegcov = Caliber.eqrunner.runcht.cht.getChtlu().getVegcov().clone();	    	
 		for (int ip=0; ip<ConstCohort.NUM_PFT; ip++) {
 	      double dummy[] = new double[3]; 
 	      

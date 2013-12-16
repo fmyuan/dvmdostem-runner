@@ -211,6 +211,38 @@ public class CohortData {
     return temcoreJNI.CohortData_vapo_get(swigCPtr, this);
   }
 
+  public void setD_tair(float[] value) {
+    temcoreJNI.CohortData_d_tair_set(swigCPtr, this, value);
+  }
+
+  public float[] getD_tair() {
+    return temcoreJNI.CohortData_d_tair_get(swigCPtr, this);
+  }
+
+  public void setD_prec(float[] value) {
+    temcoreJNI.CohortData_d_prec_set(swigCPtr, this, value);
+  }
+
+  public float[] getD_prec() {
+    return temcoreJNI.CohortData_d_prec_get(swigCPtr, this);
+  }
+
+  public void setD_nirr(float[] value) {
+    temcoreJNI.CohortData_d_nirr_set(swigCPtr, this, value);
+  }
+
+  public float[] getD_nirr() {
+    return temcoreJNI.CohortData_d_nirr_get(swigCPtr, this);
+  }
+
+  public void setD_vapo(float[] value) {
+    temcoreJNI.CohortData_d_vapo_set(swigCPtr, this, value);
+  }
+
+  public float[] getD_vapo() {
+    return temcoreJNI.CohortData_d_vapo_get(swigCPtr, this);
+  }
+
   public void setD_veg(vegstate_dim value) {
     temcoreJNI.CohortData_d_veg_set(swigCPtr, this, vegstate_dim.getCPtr(value), value);
   }

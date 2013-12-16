@@ -133,8 +133,8 @@ public class temcore {
     return temcoreJNI.NUMEQ_get();
   }
 
-  public static int getDYINY() {
-    return temcoreJNI.DYINY_get();
+  public static int getDINY() {
+    return temcoreJNI.DINY_get();
   }
 
   public static int getMINY() {
