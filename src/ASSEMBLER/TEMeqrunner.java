@@ -100,7 +100,6 @@ public class TEMeqrunner implements Runnable{
 
 			//getting the default pft index (first PFT with vegcov > 0)
 			ipft = 0;
-			
 	    	double[] vegcov = new double[ConstCohort.NUM_PFT];
 	    	vegcov = eqrunner.runcht.cht.getChtlu().getVegcov().clone();	    	
 	    	while (vegcov[ipft]<=0.0) {

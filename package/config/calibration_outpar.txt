@@ -1,23 +1,23 @@
 //===========================================================
 CMT30// Lowland Black Spruce forests - (max. 10 PFTs over 1 soil column) (BGC) plant calibrated parameters
 //Spruce     Moss        PFT2        PFT3         PFT4         PFT5         PFT6         PFT7         PFT8         PFT9        
-1142.0                                                                                                                            // cmax:
-3.1                                                                                                                               // nmax:
-0.074                                                                                                                             // cfall(0): leave
-0.00318                                                                                                                           // cfall(1): stem
-0.0163                                                                                                                            // cfall(2): root
-0.014                                                                                                                             // nfall(0): leave
-0.001                                                                                                                             // nfall(1): stem
-0.011                                                                                                                             // nfall(2): root
+1159.0                                                                                                                            // cmax:
+5.1                                                                                                                               // nmax:
+0.0673                                                                                                                            // cfall(0): leave
+0.00382                                                                                                                           // cfall(1): stem
+0.0198                                                                                                                            // cfall(2): root
+0.0436                                                                                                                            // nfall(0): leave
+0.00101                                                                                                                           // nfall(1): stem
+0.0099                                                                                                                            // nfall(2): root
 -8.06E-5                                                                                                                          // kra:    coeff(0) in maintenance resp.
--3.1                                                                                                                              // krb(0): coeff(1) in maintenance resp.(leave) 
--7.8                                                                                                                              // krb(1): coeff(1) in maintenance resp.(stem) 
--2.82                                                                                                                             // krb(2): coeff(1) in maintenance resp.(root)
-0.3                                                                                                                               // frg: fraction of available NPP (GPP after rm) for growth resp. 
+-3.32                                                                                                                             // krb(0): coeff(1) in maintenance resp.(leave) 
+-6.8                                                                                                                              // krb(1): coeff(1) in maintenance resp.(stem) 
+-3.32                                                                                                                             // krb(2): coeff(1) in maintenance resp.(root)
+0.3                                                                                                                               // frg: fraction of available NPP (GPP after rm) for growth resp.
 // soil calibrated parameters
-2.65253         // micbnup: parameter for soil microbial immobialization of N
+4.1             // micbnup: parameter for soil microbial immobialization of N
 0.0057042       // kdcmoss: dead moss C decompositin rates at reference condition
-0.01171         // kdcrawc: raw-material (litter) C decompositin rates at reference condition
-0.0038046       // kdcsoma:
-8.92E-4         // kdcsompr:
-1.623E-4        // kdcsomcr:
+0.04645         // kdcrawc: raw-material (litter) C decompositin rates at reference condition
+0.02185         // kdcsoma:
+0.002496        // kdcsompr:
+9.57E-4         // kdcsomcr:
