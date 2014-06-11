@@ -8,18 +8,18 @@
 
 package TEMJNI;
 
-public class SWIGTYPE_p_SoilParent_Env {
+public class SWIGTYPE_p_a_31__oneenv {
   private long swigCPtr;
 
-  protected SWIGTYPE_p_SoilParent_Env(long cPtr, boolean futureUse) {
+  protected SWIGTYPE_p_a_31__oneenv(long cPtr, boolean futureUse) {
     swigCPtr = cPtr;
   }
 
-  protected SWIGTYPE_p_SoilParent_Env() {
+  protected SWIGTYPE_p_a_31__oneenv() {
     swigCPtr = 0;
   }
 
-  protected static long getCPtr(SWIGTYPE_p_SoilParent_Env obj) {
+  protected static long getCPtr(SWIGTYPE_p_a_31__oneenv obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }

@@ -132,6 +132,7 @@ public class TemCalGUI{
     ParameterChanger kdcsomaChanger = new ParameterChanger("KDCsoma", 0., -3);
     ParameterChanger kdcsomprChanger = new ParameterChanger("KDCsompr", 0., -4);
     ParameterChanger kdcsomcrChanger = new ParameterChanger("KDCsomcr", 0., -5);
+    ParameterChanger kdcratio4meChanger = new ParameterChanger("KDCr4me", 0., -5);
 
     JButton parresetB = new JButton("Reset to Init");
     JButton parrestoreB = new JButton("Reset to Prev");
@@ -554,7 +555,8 @@ public class TemCalGUI{
 	        //
 			String[] calparName ={"CMAX", "NMAX", "CFALL-leaf", "CFALL-stem", "CFALL-root",
 	        		           "NFALL-leaf","NFALL-stem","NFALL-root","KRA","KRB-leaf","KRB-stem","KRB-root","FRG",
-	        		           " ", "MICBNUP", "KDCMOSSC", "KDCRAWC", "KDCSOMA", "KDCSOMPR", "KDCSOMCR"};
+	        		           " ", "MICBNUP", "KDCMOSSC", "KDCRAWC", "KDCSOMA", "KDCSOMPR", "KDCSOMCR",
+	        		           "KDCratio4me"};
 
 	        int rows1 = calparName.length;
 	        int cols1 = ColumnName.length;
@@ -814,9 +816,17 @@ public class TemCalGUI{
 				slayout.putConstraint(SpringLayout.WEST, label5, 0 ,SpringLayout.WEST, caliP);
 				caliP.add(label5);
 
+			JPanel kdcratio4meP = kdcratio4meChanger.getPanel();
+				kdcratio4meP.setPreferredSize(new Dimension(170, 50));
+				slayout.putConstraint(SpringLayout.NORTH, kdcratio4meP, 470,SpringLayout.NORTH, caliP);
+				slayout.putConstraint(SpringLayout.WEST,kdcratio4meP, 5,SpringLayout.WEST, caliP);
+				caliP.add(kdcratio4meP);
+			    kdcratio4meChanger.pmmTF.addActionListener(ParameterChanged);
+			    kdcratio4meChanger.setEnabled(false);
+
 			JPanel kdcmossP = kdcmosscChanger.getPanel();
 				kdcmossP.setPreferredSize(new Dimension(170, 50));
-				slayout.putConstraint(SpringLayout.NORTH, kdcmossP, 470,SpringLayout.NORTH, caliP);
+				slayout.putConstraint(SpringLayout.NORTH, kdcmossP, 520,SpringLayout.NORTH, caliP);
 				slayout.putConstraint(SpringLayout.WEST,kdcmossP, 5,SpringLayout.WEST, caliP);
 				caliP.add(kdcmossP);
 			    kdcmosscChanger.pmmTF.addActionListener(ParameterChanged);
@@ -824,24 +834,24 @@ public class TemCalGUI{
 
 			JPanel kdcfibP = kdcrawcChanger.getPanel();
 				kdcfibP.setPreferredSize(new Dimension(170, 50));
-				slayout.putConstraint(SpringLayout.NORTH, kdcfibP, 470,SpringLayout.NORTH, caliP);
-				slayout.putConstraint(SpringLayout.WEST,kdcfibP, 180,SpringLayout.WEST, caliP);
+				slayout.putConstraint(SpringLayout.NORTH, kdcfibP, 570, SpringLayout.NORTH, caliP);
+				slayout.putConstraint(SpringLayout.WEST,kdcfibP, 5, SpringLayout.WEST, caliP);
 				caliP.add(kdcfibP);
 			    kdcrawcChanger.pmmTF.addActionListener(ParameterChanged);
 			    kdcrawcChanger.setEnabled(false);
 			    
 			JPanel kdcsomaP = kdcsomaChanger.getPanel();
 				kdcsomaP.setPreferredSize(new Dimension(170, 50));
-				slayout.putConstraint(SpringLayout.NORTH, kdcsomaP, 520,SpringLayout.NORTH, caliP);
-				slayout.putConstraint(SpringLayout.WEST,kdcsomaP, 5,SpringLayout.WEST, caliP);
+				slayout.putConstraint(SpringLayout.NORTH, kdcsomaP, 470,SpringLayout.NORTH, caliP);
+				slayout.putConstraint(SpringLayout.WEST,kdcsomaP, 180,SpringLayout.WEST, caliP);
 				caliP.add(kdcsomaP);
 			    kdcsomaChanger.pmmTF.addActionListener(ParameterChanged);
 			    kdcsomaChanger.setEnabled(false);
 
 			JPanel kdcsomprP = kdcsomprChanger.getPanel();
 				kdcsomprP.setPreferredSize(new Dimension(170, 50));
-				slayout.putConstraint(SpringLayout.NORTH, kdcsomprP, 570,SpringLayout.NORTH, caliP);
-				slayout.putConstraint(SpringLayout.WEST,kdcsomprP, 5,SpringLayout.WEST, caliP);
+				slayout.putConstraint(SpringLayout.NORTH, kdcsomprP, 520,SpringLayout.NORTH, caliP);
+				slayout.putConstraint(SpringLayout.WEST,kdcsomprP, 180,SpringLayout.WEST, caliP);
 				caliP.add(kdcsomprP);
 			    kdcsomprChanger.pmmTF.addActionListener(ParameterChanged);
 			    kdcsomprChanger.setEnabled(false);
@@ -1032,6 +1042,7 @@ public class TemCalGUI{
 			 kdcsomaChanger.storeOldValue();
 			 kdcsomprChanger.storeOldValue();
 			 kdcsomcrChanger.storeOldValue();
+			 kdcratio4meChanger.storeOldValue();
 
 		}
 
@@ -1238,6 +1249,7 @@ public class TemCalGUI{
 	    		calparTB.setValueAt(Double.toString(dumspar.getKdcsoma()), Configurer.I_KDCSOMA, 1);
 	    		calparTB.setValueAt(Double.toString(dumspar.getKdcsompr()), Configurer.I_KDCSOMPR, 1);
 	    		calparTB.setValueAt(Double.toString(dumspar.getKdcsomcr()), Configurer.I_KDCSOMCR, 1);
+	    		calparTB.setValueAt(Double.toString(dumspar.getKdcratio4me()), Configurer.I_KDCR4ME, 1);
 
 	    		// initial states
 	    		for (int ipft=0; ipft<ConstCohort.NUM_PFT; ipft++) {
@@ -1498,6 +1510,7 @@ public class TemCalGUI{
 			calparTB.setValueAt(String.valueOf(kdcsomaChanger.getValue()), Configurer.I_KDCSOMA, 1);
 			calparTB.setValueAt(String.valueOf(kdcsomprChanger.getValue()), Configurer.I_KDCSOMPR, 1);
 			calparTB.setValueAt(String.valueOf(kdcsomcrChanger.getValue()), Configurer.I_KDCSOMCR, 1);
+			calparTB.setValueAt(String.valueOf(kdcratio4meChanger.getValue()), Configurer.I_KDCR4ME, 1);
 
 		} catch (Exception e){
 	    	JOptionPane.showMessageDialog(fcontrol, " assigning Calibration parameters to Changer failed");
@@ -1706,6 +1719,7 @@ public class TemCalGUI{
 			        kdcsomaChanger.setEnabled(true);
 			        kdcsomprChanger.setEnabled(true);
 			        kdcsomcrChanger.setEnabled(true);
+			        kdcratio4meChanger.setEnabled(true);
 
 			        
 			        assignCalparTableToChanger(Caliber.ipft); //
@@ -1868,6 +1882,10 @@ public class TemCalGUI{
 			    	dummy = input.readLine().split("//", 2)[0];
 			    	element = dummy.split("\\s+", 2);
 		      		calparTB.setValueAt(element[0].trim(), Configurer.I_KDCSOMCR, 1);
+
+		      		dummy = input.readLine().split("//", 2)[0];
+			    	element = dummy.split("\\s+", 2);
+		      		calparTB.setValueAt(element[0].trim(), Configurer.I_KDCR4ME, 1);
 		      		
 		      		input.close();
 			    }
@@ -1906,6 +1924,7 @@ public class TemCalGUI{
 				kdcsomaChanger.updateValue(Double.valueOf((String) calparTB.getValueAt(Configurer.I_KDCSOMA, 1)), -3);
 				kdcsomprChanger.updateValue(Double.valueOf((String) calparTB.getValueAt(Configurer.I_KDCSOMPR, 1)), -4);
 				kdcsomcrChanger.updateValue(Double.valueOf((String) calparTB.getValueAt(Configurer.I_KDCSOMCR, 1)), -5);
+				kdcratio4meChanger.updateValue(Double.valueOf((String) calparTB.getValueAt(Configurer.I_KDCR4ME, 1)), -5);
 
 			} catch (Exception e){
 		    	JOptionPane.showMessageDialog(fcontrol, " assigning Calibration parameters to Changer failed");
@@ -1973,6 +1992,8 @@ public class TemCalGUI{
 			dscalpar.setKdcsompr(sparval);
 			sparval = Double.valueOf((String) calparTB.getValueAt(Configurer.I_KDCSOMCR, 1));
 			dscalpar.setKdcsomcr(sparval);
+			sparval = Double.valueOf((String) calparTB.getValueAt(Configurer.I_KDCR4ME, 1));
+			dscalpar.setKdcratio4me(sparval);
 
 			// pass the parameters of soil BGC
 			Caliber.temcj.setSbCalPar(dscalpar);
@@ -2150,6 +2171,7 @@ public class TemCalGUI{
 				 kdcsomaChanger.storeOldValue();
 				 kdcsomprChanger.storeOldValue();
 				 kdcsomcrChanger.storeOldValue();
+				 kdcratio4meChanger.storeOldValue();
 		
 		}
 
@@ -2192,6 +2214,7 @@ public class TemCalGUI{
 			Caliber.jscalpar.setKdcsoma(kdcsomaChanger.getValue());
 			Caliber.jscalpar.setKdcsompr(kdcsomprChanger.getValue());
 			Caliber.jscalpar.setKdcsomcr(kdcsomcrChanger.getValue());
+			Caliber.jscalpar.setKdcratio4me(kdcratio4meChanger.getValue());
 	
 			//pass the parameters to c++ holders
 			int ipft = Caliber.ipft;
@@ -2286,6 +2309,7 @@ public class TemCalGUI{
 			 kdcsomaChanger.restore();
 			 kdcsomprChanger.restore();
 			 kdcsomcrChanger.restore();
+			 kdcratio4meChanger.restore();
 
 			 startpauseB.setEnabled(false);
 			 setupB.setEnabled(true);
@@ -2422,6 +2446,10 @@ public class TemCalGUI{
 		    	output.printf("%-16s", calparTB.getValueAt(Configurer.I_KDCSOMCR, 1));
 			    output.print("//" + dummy + "\n");
 
+		    	dummy = input.readLine().split("//", 2)[1];             // Line 23 - "//" is delimiter for comments
+		    	output.printf("%-16s", calparTB.getValueAt(Configurer.I_KDCR4ME, 1));
+			    output.print("//" + dummy + "\n");
+
 			    //
 			    input.close();
 			    output.close();
@@ -2462,7 +2490,9 @@ public class TemCalGUI{
 			calparTB.setValueAt(String.valueOf(kdcsomaChanger.getValue()), Configurer.I_KDCSOMA, 1);
 			calparTB.setValueAt(String.valueOf(kdcsomprChanger.getValue()), Configurer.I_KDCSOMPR, 1);
 			calparTB.setValueAt(String.valueOf(kdcsomcrChanger.getValue()), Configurer.I_KDCSOMCR, 1);
-		
+
+			calparTB.setValueAt(String.valueOf(kdcratio4meChanger.getValue()), Configurer.I_KDCR4ME, 1);
+
 		};
 
 
