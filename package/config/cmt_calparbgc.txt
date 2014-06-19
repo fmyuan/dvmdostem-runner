@@ -21,6 +21,7 @@ CMT00 // Default TEM community - (max. 10 PFTs over 1 soil column) (BGC) plant c
 0.0108046       // kdcsoma:
 0.0020805       // kdcsompr:
 0.0000108       // kdcsomcr:
+0.50            // kdcratio4me: ratio of anaerobic to aerobic KDC above for methane production (at 50% saturation)
 //===========================================================
 CMT30// Lowland Black Spruce forests - (max. 10 PFTs over 1 soil column) (BGC) plant calibrated parameters
 //Spruce     Moss        PFT2        PFT3         PFT4         PFT5         PFT6         PFT7         PFT8         PFT9
@@ -44,6 +45,7 @@ CMT30// Lowland Black Spruce forests - (max. 10 PFTs over 1 soil column) (BGC) p
 0.0108046         // kdcsoma:
 0.0020805         // kdcsompr:
 0.0000108         // kdcsomcr:
+0.50              // kdcratio4me: ratio of anaerobic to aerobic KDC above for methane production (at 50% saturation)
 //===========================================================
 CMT51 // Coastal polygonal tundra: trough - (max. 10 PFTs over 1 soil column) (BGC) plant calibrated parameters
 //Shrub      Graminoid   Non-vasc    PFT3         PFT4         PFT5         PFT6         PFT7         PFT8         PFT9
@@ -67,6 +69,7 @@ CMT51 // Coastal polygonal tundra: trough - (max. 10 PFTs over 1 soil column) (B
 0.0108046         // kdcsoma:
 0.0020805         // kdcsompr:
 0.0000108         // kdcsomcr:
+0.50              // kdcratio4me: ratio of anaerobic to aerobic KDC above for methane production (at 50% saturation)
 //===========================================================
 CMT52 // Coastal polygonal tundra: low-center basin - (max. 10 PFTs over 1 soil column) (BGC) plant calibrated parameters
 //Shrub      Graminoid   Non-vasc    PFT3         PFT4         PFT5         PFT6         PFT7         PFT8         PFT9
@@ -90,6 +93,7 @@ CMT52 // Coastal polygonal tundra: low-center basin - (max. 10 PFTs over 1 soil 
 0.0108046         // kdcsoma:
 0.0020805         // kdcsompr:
 0.0000108         // kdcsomcr:
+0.50              // kdcratio4me: ratio of anaerobic to aerobic KDC above for methane production (at 50% saturation)
 //===========================================================
 CMT53 // Coastal polygonal tundra: low-center transition - (max. 10 PFTs over 1 soil column) (BGC) plant calibrated parameters
 //Shrub      Graminoid   Non-vasc    PFT3         PFT4         PFT5         PFT6         PFT7         PFT8         PFT9
@@ -113,6 +117,7 @@ CMT53 // Coastal polygonal tundra: low-center transition - (max. 10 PFTs over 1 
 0.0108046         // kdcsoma:
 0.0020805         // kdcsompr:
 0.0000108         // kdcsomcr:
+0.50              // kdcratio4me: ratio of anaerobic to aerobic KDC above for methane production (at 50% saturation)
 //===========================================================
 CMT54 // Coastal polygonal tundra: high-center transition - (max. 10 PFTs over 1 soil column) (BGC) plant calibrated parameters
 //Shrub      Graminoid   Non-vasc    PFT3         PFT4         PFT5         PFT6         PFT7         PFT8         PFT9
@@ -136,6 +141,7 @@ CMT54 // Coastal polygonal tundra: high-center transition - (max. 10 PFTs over 1
 0.0108046         // kdcsoma:
 0.0020805         // kdcsompr:
 0.0000108         // kdcsomcr:
+0.50              // kdcratio4me: ratio of anaerobic to aerobic KDC above for methane production (at 50% saturation)
 //===========================================================
 CMT55 // Coastal polygonal tundra: high-center top - (max. 10 PFTs over 1 soil column) (BGC) plant calibrated parameters
 //Shrub      Graminoid   Non-vasc    PFT3         PFT4         PFT5         PFT6         PFT7         PFT8         PFT9
@@ -159,6 +165,7 @@ CMT55 // Coastal polygonal tundra: high-center top - (max. 10 PFTs over 1 soil c
 0.0108046         // kdcsoma:
 0.0020805         // kdcsompr:
 0.0000108         // kdcsomcr:
+0.50              // kdcratio4me: ratio of anaerobic to aerobic KDC above for methane production (at 50% saturation)
 //===========================================================
 CMT56 // Coastal polygonal tundra: rim - (max. 10 PFTs over 1 soil column) (BGC) plant calibrated parameters
 //Shrub      Graminoid   Non-vasc    PFT3         PFT4         PFT5         PFT6         PFT7         PFT8         PFT9
@@ -182,3 +189,4 @@ CMT56 // Coastal polygonal tundra: rim - (max. 10 PFTs over 1 soil column) (BGC)
 0.0108046         // kdcsoma:
 0.0020805         // kdcsompr:
 0.0000108         // kdcsomcr:
+0.50              // kdcratio4me: ratio of anaerobic to aerobic KDC above for methane production (at 50% saturation)

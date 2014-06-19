@@ -6,6 +6,7 @@ CMT00 // Default TEM Community - (max. 10 PFTs) Plant structure/dimension
 0           1           1            0            0            0            0            0            0            0            // ifdeciwoody: deciduous woodland (1) or not (0)
 1           1           1            1            0            0            1            0            0            0            // ifperenial: perenial (1) or not (0)
 0           0           0            0            0            0            0            3            2            0            // nonvascular type: vascular (0), sphagnum (1), feathermoss (2), lichen (3)
+0.0         0.0         0.0          0.0          0.0          0.5          1.0          0.0          0.0          0.0          // plant aerenchyma index (0 - 1): index for pft's capacity to transport gas via aerenchyma
 0.0077      0.0077      0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.           // sla: specific leaf area (m2/gC)
 0.55        0.45        0.35         0.35         0.15         0.15         0.15         0.10         0.10         0.           // klai: extinction coeff for conversion from lai to fpc
 0.0         0.0         0.0          0.5          0.0          0.0          0.25         0.0          0.0          0.0          // minleaf: this and the following 4 parameters are for EET/PET controlled phenology - f(leaf)
@@ -43,12 +44,13 @@ CMT00 // Default TEM Community - (max. 10 PFTs) Plant structure/dimension
 1.0         0.0         0.0          0.7          0.8          0.5          1.5          2.1          1.1          0            // envlai[11]: monthly LAI for a year, used for static input of LAI
 //===========================================================
 CMT30 // Lowland Black Spruce Forests - (max. 10 PFTs) Plant structure/dimension
-//Spruce     Moss       PFT2         PFT3         PFT4         PFT5         PFT6         PFT7         PFT8         PFT9        
+//Spruce    Moss       PFT2         PFT3         PFT4         PFT5         PFT6         PFT7         PFT8         PFT9        
 1.00        0.00        0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.           // vegfrac: vegetation coverage on land - 0 indicates that PFT does't exist
 1           0           1            1            0            0            0            0            0            0            // ifwoody: woody plants (1) or not (0)
 0           1           1            0            0            0            0            0            0            0            // ifdeciwoody: deciduous woodland (1) or not (0)
 1           1           1            1            0            0            1            0            0            0            // ifperenial: perenial (1) or not (0)
 0           1           0            0            0            0            0            3            2            0            // nonvascular type: vascular (0), sphagnum (1), feathermoss (2), lichen (3)
+0.0         0.50        0.0          0.0          0.0          0.5          1.0          0.0          0.0          0.0          // plant aerenchyma index (0 - 1): index for pft's capacity to transport gas via aerenchyma
 0.0077      0.0077      0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.           // sla: specific leaf area (m2/gC)
 0.55        0.45        0.35         0.35         0.15         0.15         0.15         0.10         0.10         0.           // klai: extinction coeff for conversion from lai to fpc
 0.0         0.0         0.0          0.5          0.0          0.0          0.25         0.0          0.0          0.0          // minleaf: this and the following 4 parameters are for EET/PET controlled phenology - f(leaf)
@@ -92,6 +94,7 @@ CMT51 // coastal polygonal tundra: trough - (max. 10 PFTs) Plant structure/dimen
 1           1           1            0            0            0            0            0            0            0            // ifdeciwoody: deciduous woodland (1) or not (0)
 1           1           1            1            0            0            1            0            0            0            // ifperenial: perenial (1) or not (0)
 0           0           1            0            0            0            0            3            2            0            // nonvascular type: vascular (0), sphagnum (1), feathermoss (2), lichen (3)
+0.0         0.90        0.0          0.0          0.0          0.5          1.0          0.0          0.0          0.0          // plant aerenchyma index (0 - 1): index for pft's capacity to transport gas via aerenchyma
 0.0077      0.0077      0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.           // sla: specific leaf area (m2/gC)
 0.55        0.45        0.35         0.35         0.15         0.15         0.15         0.10         0.10         0.           // klai: extinction coeff for conversion from lai to fpc
 0.0         0.0         0.0          0.5          0.0          0.0          0.25         0.0          0.0          0.0          // minleaf: this and the following 4 parameters are for EET/PET controlled phenology - f(leaf)
@@ -135,6 +138,7 @@ CMT52 // coastal polygonal tundra: low-center basin - (max. 10 PFTs) Plant struc
 1           1           1            0            0            0            0            0            0            0            // ifdeciwoody: deciduous woodland (1) or not (0)
 1           1           1            1            0            0            1            0            0            0            // ifperenial: perenial (1) or not (0)
 0           0           1            0            0            0            0            3            2            0            // nonvascular type: vascular (0), sphagnum (1), feathermoss (2), lichen (3)
+0.0         0.75        0.0          0.0          0.0          0.5          1.0          0.0          0.0          0.0          // plant aerenchyma index (0 - 1): index for pft's capacity to transport gas via aerenchyma
 0.0077      0.0077      0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.           // sla: specific leaf area (m2/gC)
 0.55        0.45        0.35         0.35         0.15         0.15         0.15         0.10         0.10         0.           // klai: extinction coeff for conversion from lai to fpc
 0.0         0.0         0.0          0.5          0.0          0.0          0.25         0.0          0.0          0.0          // minleaf: this and the following 4 parameters are for EET/PET controlled phenology - f(leaf)
@@ -177,7 +181,8 @@ CMT53 // coastal polygonal tundra: low-center transition - (max. 10 PFTs) Plant 
 1           0           0            1            0            0            0            0            0            0            // ifwoody: woody plants (1) or not (0)
 1           1           1            0            0            0            0            0            0            0            // ifdeciwoody: deciduous woodland (1) or not (0)
 1           1           1            1            0            0            1            0            0            0            // ifperenial: perenial (1) or not (0)
-0           0           1            0            0            0            0            3            2            0            // nonvascular type: vascular (0), sphagnum (1), feathermoss (2), lichen (3)
+0           0.0         1            0            0            0            0            3            2            0            // nonvascular type: vascular (0), sphagnum (1), feathermoss (2), lichen (3)
+0.0         0.25        0.00         0.0          0.0          0.5          1.0          0.0          0.0          0.0          // plant aerenchyma index (0 - 1): index for pft's capacity to transport gas via aerenchyma
 0.0077      0.0077      0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.           // sla: specific leaf area (m2/gC)
 0.55        0.45        0.35         0.35         0.15         0.15         0.15         0.10         0.10         0.           // klai: extinction coeff for conversion from lai to fpc
 0.0         0.0         0.0          0.5          0.0          0.0          0.25         0.0          0.0          0.0          // minleaf: this and the following 4 parameters are for EET/PET controlled phenology - f(leaf)
@@ -221,6 +226,7 @@ CMT54 // coastal polygonal tundra: high-center transition - (max. 10 PFTs) Plant
 1           1           1            0            0            0            0            0            0            0            // ifdeciwoody: deciduous woodland (1) or not (0)
 1           1           1            1            0            0            1            0            0            0            // ifperenial: perenial (1) or not (0)
 0           0           1            0            0            0            0            3            2            0            // nonvascular type: vascular (0), sphagnum (1), feathermoss (2), lichen (3)
+0.0         0.10        0.0          0.0          0.0          0.5          1.0          0.0          0.0          0.0          // plant aerenchyma index (0 - 1): index for pft's capacity to transport gas via aerenchyma
 0.0077      0.0077      0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.           // sla: specific leaf area (m2/gC)
 0.55        0.45        0.35         0.35         0.15         0.15         0.15         0.10         0.10         0.           // klai: extinction coeff for conversion from lai to fpc
 0.0         0.0         0.0          0.5          0.0          0.0          0.25         0.0          0.0          0.0          // minleaf: this and the following 4 parameters are for EET/PET controlled phenology - f(leaf)
@@ -264,6 +270,7 @@ CMT55 // coastal polygonal tundra: high-center top - (max. 10 PFTs) Plant struct
 0           1           1            0            0            0            0            0            0            0            // ifdeciwoody: deciduous woodland (1) or not (0)
 1           1           1            1            0            0            1            0            0            0            // ifperenial: perenial (1) or not (0)
 0           0           1            0            0            0            0            3            2            0            // nonvascular type: vascular (0), sphagnum (1), feathermoss (2), lichen (3)
+0.0         0.05        0.0          0.0          0.0          0.5          1.0          0.0          0.0          0.0          // plant aerenchyma index (0 - 1): index for pft's capacity to transport gas via aerenchyma
 0.0077      0.0077      0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.           // sla: specific leaf area (m2/gC)
 0.55        0.45        0.35         0.35         0.15         0.15         0.15         0.10         0.10         0.           // klai: extinction coeff for conversion from lai to fpc
 0.0         0.0         0.0          0.5          0.0          0.0          0.25         0.0          0.0          0.0          // minleaf: this and the following 4 parameters are for EET/PET controlled phenology - f(leaf)
@@ -307,6 +314,7 @@ CMT56 // coastal polygonal tundra: rim - (max. 10 PFTs) Plant structure/dimensio
 0           1           1            0            0            0            0            0            0            0            // ifdeciwoody: deciduous woodland (1) or not (0)
 1           1           1            1            0            0            1            0            0            0            // ifperenial: perenial (1) or not (0)
 0           0           1            0            0            0            0            3            2            0            // nonvascular type: vascular (0), sphagnum (1), feathermoss (2), lichen (3)
+0.0         0.05        0.0          0.0          0.0          0.5          1.0          0.0          0.0          0.0          // plant aerenchyma index (0 - 1): index for pft's capacity to transport gas via aerenchyma
 0.0077      0.0077      0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.0077       0.           // sla: specific leaf area (m2/gC)
 0.55        0.45        0.35         0.35         0.15         0.15         0.15         0.10         0.10         0.           // klai: extinction coeff for conversion from lai to fpc
 0.0         0.0         0.0          0.5          0.0          0.0          0.25         0.0          0.0          0.0          // minleaf: this and the following 4 parameters are for EET/PET controlled phenology - f(leaf)
