@@ -133,6 +133,14 @@ public class temcore {
     return temcoreJNI.NUMEQ_get();
   }
 
+  public static int getMONTHLY() {
+    return temcoreJNI.MONTHLY_get();
+  }
+
+  public static int getDAILY() {
+    return temcoreJNI.DAILY_get();
+  }
+
   public static int getDINY() {
     return temcoreJNI.DINY_get();
   }

@@ -7,6 +7,8 @@ import TEMJNI.CohortData;
 import TEMJNI.EnvData;
 import TEMJNI.BgcData;
 
+import DATA.ConstTime;
+
 //GUI
 import GUI.BioVariablePlotter;
 import GUI.PhyVariablePlotter;
@@ -168,7 +170,7 @@ public class PlotterUpdate {
 	public void updateDlyBioGraph(int yrcnt, int im, BgcData pftbd, BgcData allbd){		//update plots
 		if(BioVariablePlotter.f.isVisible()){
 			 
-			double x = (double)yrcnt+(double)im/12.0;
+			double x = (double)yrcnt+(double)im/ConstTime.DINY;
 			double y1 = 0.0, y2 = 0.0, y3 = 0.0, y4 = 0.0;
 			 
 			// 1 pft C/N (mainly for veg)
@@ -268,7 +270,8 @@ public class PlotterUpdate {
 		y3 = alled.getY_soid().getVwcmineb();
 		var2plotter.vwc2TP.addPoint(x, y1, y2, y3, y4);;
 
-		y1 = alled.getY_soid().getAld(); if (y1<=-9999) y1 = cd.getY_soil().getTotthick();
+		y1 = alled.getY_sois().getAld(); 
+		if (y1<=-9999) y1 = cd.getY_soil().getTotthick();
 		y2 = alled.getY_sois().getWatertab();
 		y3 = alled.getY_sois().getDraindepth();
 		var2plotter.aldwtbTP.addPoint(x, y1, y2, y3);;
@@ -286,7 +289,7 @@ public class PlotterUpdate {
 
 		if(PhyVariablePlotter.f.isVisible()){
 
-		double x = (double)yrcnt+(double)im/12.;
+		double x = (double)yrcnt+(double)im/ConstTime.DINY;
 		double y1 = 0., y2 = 0., y3 = 0.;
 		
 		//
@@ -322,8 +325,8 @@ public class PlotterUpdate {
 		y1 = alled.getD_atms().getTa();
 		var2plotter.mtaTP.addPoint(x, y1);
 
-		y1 = alled.getD_soid().getAld();
-		y2 = alled.getD_soid().getAlc();
+		y1 = alled.getD_sois().getAld();
+		y2 = alled.getD_sois().getAlc();
 		var2plotter.maldTP.addPoint(x, y1, y2);
 
 		y1 = alled.getD_soid().getTdeep();

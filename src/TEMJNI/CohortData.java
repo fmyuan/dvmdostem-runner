@@ -211,6 +211,38 @@ public class CohortData {
     return temcoreJNI.CohortData_vapo_get(swigCPtr, this);
   }
 
+  public void setAct_ndep_yr(int value) {
+    temcoreJNI.CohortData_act_ndep_yr_set(swigCPtr, this, value);
+  }
+
+  public int getAct_ndep_yr() {
+    return temcoreJNI.CohortData_act_ndep_yr_get(swigCPtr, this);
+  }
+
+  public void setNdep(float[] value) {
+    temcoreJNI.CohortData_ndep_set(swigCPtr, this, value);
+  }
+
+  public float[] getNdep() {
+    return temcoreJNI.CohortData_ndep_get(swigCPtr, this);
+  }
+
+  public void setAct_ozon_yr(int value) {
+    temcoreJNI.CohortData_act_ozon_yr_set(swigCPtr, this, value);
+  }
+
+  public int getAct_ozon_yr() {
+    return temcoreJNI.CohortData_act_ozon_yr_get(swigCPtr, this);
+  }
+
+  public void setOzon(float[] value) {
+    temcoreJNI.CohortData_ozon_set(swigCPtr, this, value);
+  }
+
+  public float[] getOzon() {
+    return temcoreJNI.CohortData_ozon_get(swigCPtr, this);
+  }
+
   public void setD_tair(float[] value) {
     temcoreJNI.CohortData_d_tair_set(swigCPtr, this, value);
   }
@@ -413,12 +445,12 @@ public class CohortData {
     temcoreJNI.CohortData_beginOfMonth(swigCPtr, this);
   }
 
-  public void beginOfDay() {
-    temcoreJNI.CohortData_beginOfDay(swigCPtr, this);
-  }
-
   public void endOfDay(int dinm) {
     temcoreJNI.CohortData_endOfDay(swigCPtr, this, dinm);
+  }
+
+  public void endOfDay_snow(int dinm) {
+    temcoreJNI.CohortData_endOfDay_snow(swigCPtr, this, dinm);
   }
 
   public void endOfMonth() {

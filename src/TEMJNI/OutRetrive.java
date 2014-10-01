@@ -47,42 +47,6 @@ public class OutRetrive {
     return temcoreJNI.OutRetrive_cohortcount_get(swigCPtr, this);
   }
 
-  public void setEnvoddly(SWIGTYPE_p_a_31__oneenv value) {
-    temcoreJNI.OutRetrive_envoddly_set(swigCPtr, this, SWIGTYPE_p_a_31__oneenv.getCPtr(value));
-  }
-
-  public SWIGTYPE_p_a_31__oneenv getEnvoddly() {
-    long cPtr = temcoreJNI.OutRetrive_envoddly_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_31__oneenv(cPtr, false);
-  }
-
-  public void setEnvoddlyall(SWIGTYPE_p_oneenv value) {
-    temcoreJNI.OutRetrive_envoddlyall_set(swigCPtr, this, SWIGTYPE_p_oneenv.getCPtr(value));
-  }
-
-  public SWIGTYPE_p_oneenv getEnvoddlyall() {
-    long cPtr = temcoreJNI.OutRetrive_envoddlyall_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_oneenv(cPtr, false);
-  }
-
-  public void setBgcoddly(SWIGTYPE_p_a_31__onebgc value) {
-    temcoreJNI.OutRetrive_bgcoddly_set(swigCPtr, this, SWIGTYPE_p_a_31__onebgc.getCPtr(value));
-  }
-
-  public SWIGTYPE_p_a_31__onebgc getBgcoddly() {
-    long cPtr = temcoreJNI.OutRetrive_bgcoddly_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_31__onebgc(cPtr, false);
-  }
-
-  public void setBgcoddlyall(SWIGTYPE_p_onebgc value) {
-    temcoreJNI.OutRetrive_bgcoddlyall_set(swigCPtr, this, SWIGTYPE_p_onebgc.getCPtr(value));
-  }
-
-  public SWIGTYPE_p_onebgc getBgcoddlyall() {
-    long cPtr = temcoreJNI.OutRetrive_bgcoddlyall_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_onebgc(cPtr, false);
-  }
-
   public void setRegnod(OutDataRegn value) {
     temcoreJNI.OutRetrive_regnod_set(swigCPtr, this, OutDataRegn.getCPtr(value), value);
   }
@@ -121,20 +85,12 @@ public class OutRetrive {
     temcoreJNI.OutRetrive_setRestartOutData(swigCPtr, this, RestartData.getCPtr(resodp), resodp);
   }
 
-  public void assignSiteDlyOutputBuffer_Env(snwstate_dim d_snow, int ipft, int iday) {
-    temcoreJNI.OutRetrive_assignSiteDlyOutputBuffer_Env(swigCPtr, this, snwstate_dim.getCPtr(d_snow), d_snow, ipft, iday);
+  public void updateRegnOutputBuffer(int im, int idoy) {
+    temcoreJNI.OutRetrive_updateRegnOutputBuffer(swigCPtr, this, im, idoy);
   }
 
-  public void assignSiteDlyOutputBuffer_Bgc(int ipft, int iday) {
-    temcoreJNI.OutRetrive_assignSiteDlyOutputBuffer_Bgc(swigCPtr, this, ipft, iday);
-  }
-
-  public void updateRegnOutputBuffer(int im) {
-    temcoreJNI.OutRetrive_updateRegnOutputBuffer(swigCPtr, this, im);
-  }
-
-  public void updateRestartOutputBuffer() {
-    temcoreJNI.OutRetrive_updateRestartOutputBuffer(swigCPtr, this);
+  public void updateRestartOutputBuffer(ModelData md) {
+    temcoreJNI.OutRetrive_updateRestartOutputBuffer(swigCPtr, this, ModelData.getCPtr(md), md);
   }
 
 }

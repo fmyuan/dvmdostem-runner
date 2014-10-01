@@ -286,8 +286,8 @@ public class Cohort {
     temcoreJNI.Cohort_prepareDayDrivingData(swigCPtr, this, yrcnt, usedatmyr);
   }
 
-  public void updateMonthly(int yrcnt, int currmind, int dinmcurr) {
-    temcoreJNI.Cohort_updateMonthly(swigCPtr, this, yrcnt, currmind, dinmcurr);
+  public void updateOneTimestep(int yrcnt, int currmind, int dinmcurr) {
+    temcoreJNI.Cohort_updateOneTimestep(swigCPtr, this, yrcnt, currmind, dinmcurr);
   }
 
 }

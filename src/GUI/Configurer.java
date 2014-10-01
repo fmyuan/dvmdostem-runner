@@ -18,6 +18,7 @@ public class Configurer{
   	public String grdinputdir= "";
   	public String chtinputdir= "";
 
+  	public int timestep      = 1;
   	public String runstages  = "eq";
   	public String initmodes  = "default";
   	public String initialfile= "";

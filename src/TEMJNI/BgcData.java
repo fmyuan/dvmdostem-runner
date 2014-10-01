@@ -439,6 +439,10 @@ public class BgcData {
     return (cPtr == 0) ? null : new SWIGTYPE_p_dequeT_double_t(cPtr, false);
   }
 
+  public void land_beginOfMonth() {
+    temcoreJNI.BgcData_land_beginOfMonth(swigCPtr, this);
+  }
+
   public void land_beginOfYear() {
     temcoreJNI.BgcData_land_beginOfYear(swigCPtr, this);
   }
@@ -455,12 +459,12 @@ public class BgcData {
     temcoreJNI.BgcData_veg_beginOfMonth(swigCPtr, this);
   }
 
-  public void veg_endOfMonth(int dinm) {
-    temcoreJNI.BgcData_veg_endOfMonth(swigCPtr, this, dinm);
+  public void veg_endOfDay(int dinm) {
+    temcoreJNI.BgcData_veg_endOfDay(swigCPtr, this, dinm);
   }
 
-  public void veg_endOfYear() {
-    temcoreJNI.BgcData_veg_endOfYear(swigCPtr, this);
+  public void veg_endOfMonth() {
+    temcoreJNI.BgcData_veg_endOfMonth(swigCPtr, this);
   }
 
   public void soil_beginOfYear() {

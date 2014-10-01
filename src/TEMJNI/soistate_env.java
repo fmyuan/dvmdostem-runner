@@ -83,6 +83,30 @@ public class soistate_env {
     return temcoreJNI.soistate_env_trock_get(swigCPtr, this);
   }
 
+  public void setWatertab(double value) {
+    temcoreJNI.soistate_env_watertab_set(swigCPtr, this, value);
+  }
+
+  public double getWatertab() {
+    return temcoreJNI.soistate_env_watertab_get(swigCPtr, this);
+  }
+
+  public void setDraindepth(double value) {
+    temcoreJNI.soistate_env_draindepth_set(swigCPtr, this, value);
+  }
+
+  public double getDraindepth() {
+    return temcoreJNI.soistate_env_draindepth_get(swigCPtr, this);
+  }
+
+  public void setPermafrost(int value) {
+    temcoreJNI.soistate_env_permafrost_set(swigCPtr, this, value);
+  }
+
+  public int getPermafrost() {
+    return temcoreJNI.soistate_env_permafrost_get(swigCPtr, this);
+  }
+
   public void setFrontstype(int[] value) {
     temcoreJNI.soistate_env_frontstype_set(swigCPtr, this, value);
   }
@@ -99,20 +123,44 @@ public class soistate_env {
     return temcoreJNI.soistate_env_frontsz_get(swigCPtr, this);
   }
 
-  public void setWatertab(double value) {
-    temcoreJNI.soistate_env_watertab_set(swigCPtr, this, value);
+  public void setAlc(double value) {
+    temcoreJNI.soistate_env_alc_set(swigCPtr, this, value);
   }
 
-  public double getWatertab() {
-    return temcoreJNI.soistate_env_watertab_get(swigCPtr, this);
+  public double getAlc() {
+    return temcoreJNI.soistate_env_alc_get(swigCPtr, this);
   }
 
-  public void setDraindepth(double value) {
-    temcoreJNI.soistate_env_draindepth_set(swigCPtr, this, value);
+  public void setAld(double value) {
+    temcoreJNI.soistate_env_ald_set(swigCPtr, this, value);
   }
 
-  public double getDraindepth() {
-    return temcoreJNI.soistate_env_draindepth_get(swigCPtr, this);
+  public double getAld() {
+    return temcoreJNI.soistate_env_ald_get(swigCPtr, this);
+  }
+
+  public void setMonthsfrozen(double value) {
+    temcoreJNI.soistate_env_monthsfrozen_set(swigCPtr, this, value);
+  }
+
+  public double getMonthsfrozen() {
+    return temcoreJNI.soistate_env_monthsfrozen_get(swigCPtr, this);
+  }
+
+  public void setRtfrozendays(int value) {
+    temcoreJNI.soistate_env_rtfrozendays_set(swigCPtr, this, value);
+  }
+
+  public int getRtfrozendays() {
+    return temcoreJNI.soistate_env_rtfrozendays_get(swigCPtr, this);
+  }
+
+  public void setRtunfrozendays(int value) {
+    temcoreJNI.soistate_env_rtunfrozendays_set(swigCPtr, this, value);
+  }
+
+  public int getRtunfrozendays() {
+    return temcoreJNI.soistate_env_rtunfrozendays_get(swigCPtr, this);
   }
 
   public soistate_env() {

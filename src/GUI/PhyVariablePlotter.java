@@ -11,11 +11,13 @@ import javax.swing.JTabbedPane;
 import com.l2fprod.common.swing.JTaskPane;
 import com.l2fprod.common.swing.JTaskPaneGroup;
 
+import DATA.ConstTime;
+
 public class PhyVariablePlotter {
 
 	static JFrame f;
 
-	// Yearly vairables
+	// Yearly variables
 	public PlotterMode2 ts1TP;
 	public PlotterMode2 vwc1TP;
 	public PlotterMode2 etTP;
@@ -26,7 +28,7 @@ public class PhyVariablePlotter {
 	public PlotterMode3 aldwtbTP;
 	public PlotterMode3 peatthickTP;
 
-	// Monthly variables
+	// Seasonal variables
 	public PlotterMode2 mpptTP;
 	public PlotterMode2 metTP;
 	public PlotterMode2 mqoutTP;
@@ -174,7 +176,7 @@ public class PhyVariablePlotter {
 
 		JTaskPane leftJTP = new JTaskPane();
 
-		mpptTP = new PlotterMode2("RAINFALL", "SNOWFALL", 24);
+		mpptTP = new PlotterMode2("RAINFALL", "SNOWFALL", ConstTime.DINY);
 		JPanel mpptPanel = mpptTP.getPanel();
 		mpptPanel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup mpptTG = new JTaskPaneGroup();
@@ -184,7 +186,7 @@ public class PhyVariablePlotter {
 		mpptTG.add(mpptPanel);
 		leftJTP.add(mpptTG);
 
-		metTP = new PlotterMode2("PET", "EET", 24);
+		metTP = new PlotterMode2("PET", "EET", ConstTime.DINY);
 		JPanel metPanel = metTP.getPanel();
 		metPanel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup metTG = new JTaskPaneGroup();
@@ -194,7 +196,7 @@ public class PhyVariablePlotter {
 		metTG.add(metPanel);
 		leftJTP.add(metTG);
 
-		mqoutTP = new PlotterMode2("RUNOFF", "DRAINAGE", 24);
+		mqoutTP = new PlotterMode2("RUNOFF", "DRAINAGE", ConstTime.DINY);
 		JPanel mqoutPanel = mqoutTP.getPanel();
 		mqoutPanel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup mqoutTG = new JTaskPaneGroup();
@@ -206,7 +208,7 @@ public class PhyVariablePlotter {
 		
 		JTaskPane rightJTP = new JTaskPane();
 		
-		mwtbdrgdTP = new PlotterMode2("Water Table", "Drainage Depth", 24);
+		mwtbdrgdTP = new PlotterMode2("Water Table", "Drainage Depth", ConstTime.DINY);
 		JPanel mwtbdrgdPanel = mwtbdrgdTP.getPanel();
 		mwtbdrgdPanel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup mwtbdrgdTG = new JTaskPaneGroup();
@@ -216,7 +218,7 @@ public class PhyVariablePlotter {
 		mwtbdrgdTG.add(mwtbdrgdPanel);
 		rightJTP.add(mwtbdrgdTG);
 	
-		mvwc1TP = new PlotterMode2("Shlw", "Deep", 24);
+		mvwc1TP = new PlotterMode2("Shlw", "Deep", ConstTime.DINY);
 		JPanel mvwc1Panel = mvwc1TP.getPanel();
 		mvwc1Panel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup mvwc1TG = new JTaskPaneGroup();
@@ -226,7 +228,7 @@ public class PhyVariablePlotter {
 		mvwc1TG.add(mvwc1Panel);
 		rightJTP.add(mvwc1TG);
 				
-		mvwc2TP = new PlotterMode3("Mine-20", "Mine-100", "Mine-below100", 24);
+		mvwc2TP = new PlotterMode3("Mine-20", "Mine-100", "Mine-below100", ConstTime.DINY);
 		JPanel mvwc2Panel = mvwc2TP.getPanel();
 		mvwc2Panel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup mvwc2TG = new JTaskPaneGroup();
@@ -249,7 +251,7 @@ public class PhyVariablePlotter {
 
 		JTaskPane leftJTP = new JTaskPane();
 
-		mppfdTP = new PlotterMode1("PAR", 24);
+		mppfdTP = new PlotterMode1("PAR", ConstTime.DINY);
 		JPanel mrecoPanel = mppfdTP.getPanel();
 		mrecoPanel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup mrecoTG = new JTaskPaneGroup();
@@ -259,7 +261,7 @@ public class PhyVariablePlotter {
 		mrecoTG.add(mrecoPanel);
 		leftJTP.add(mrecoTG);
 
-		mtaTP = new PlotterMode1("Tair", 24);
+		mtaTP = new PlotterMode1("Tair", ConstTime.DINY);
 		JPanel mtaPanel = mtaTP.getPanel();
 		mtaPanel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup mtaTG = new JTaskPaneGroup();
@@ -271,7 +273,7 @@ public class PhyVariablePlotter {
 		
 		JTaskPane rightJTP = new JTaskPane();
 		
-		maldTP = new PlotterMode2("ALD", "ALC", 24);
+		maldTP = new PlotterMode2("ALD", "ALC", ConstTime.DINY);
 		JPanel maldPanel = maldTP.getPanel();
 		maldPanel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup maldTG = new JTaskPaneGroup();
@@ -281,7 +283,7 @@ public class PhyVariablePlotter {
 		maldTG.add(maldPanel);
 		rightJTP.add(maldTG);
 
-		mts1TP = new PlotterMode2("Shlw", "Deep", 24);
+		mts1TP = new PlotterMode2("Shlw", "Deep", ConstTime.DINY);
 		JPanel mts1Panel = mts1TP.getPanel();
 		mts1Panel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup mts1TG = new JTaskPaneGroup();
@@ -291,7 +293,7 @@ public class PhyVariablePlotter {
 		mts1TG.add(mts1Panel);
 		rightJTP.add(mts1TG);
 				
-		mts2TP = new PlotterMode3("Mine-20", "Mine-100", "Mine-below100", 24);
+		mts2TP = new PlotterMode3("Mine-20", "Mine-100", "Mine-below100", ConstTime.DINY);
 		JPanel mts2Panel = mts2TP.getPanel();
 		mts2Panel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup mts2TG = new JTaskPaneGroup();

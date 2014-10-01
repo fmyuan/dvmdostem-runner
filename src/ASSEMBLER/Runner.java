@@ -90,6 +90,7 @@ public class Runner {
  		  	md.setGrdinputdir(jconfigin.grdinputdir);
  		  	md.setChtinputdir(jconfigin.chtinputdir);
  		  
+ 		  	md.setTimestep(jconfigin.timestep);
  		  	md.setRunstages(jconfigin.runstages);
  		  	md.setInitmodes(jconfigin.initmodes);
  		  	md.setInitialfile(jconfigin.initialfile);
@@ -480,7 +481,7 @@ public class Runner {
 			}
 
 			System.out.println("cohort: "+ chtid+ " - running! \n");
-			runcht.run_cohortly();
+			runcht.run_OneCohort();
 		
 		} catch (Exception ex) {
 	  		System.err.println("Error in Runner::run_siter() " + ex);
@@ -546,7 +547,7 @@ public class Runner {
 				}
 
 				System.out.println("cohort: "+ chtid+ " - running! \n");
-				runcht.run_cohortly();
+				runcht.run_OneCohort();
 				
 				runcht.cohortcount++;
 			

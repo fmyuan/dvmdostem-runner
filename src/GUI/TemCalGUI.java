@@ -1052,7 +1052,7 @@ public class TemCalGUI{
 
 		public void actionPerformed(ActionEvent arg0) {
 			//open file chooser
-			String defaultdir = "config/";
+			String defaultdir = "./";
 			JFileChooser fc = new JFileChooser(defaultdir);
 			int returnVal =fc.showOpenDialog(selectControlfileB);
 			if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -1523,7 +1523,7 @@ public class TemCalGUI{
 
 			public void actionPerformed(ActionEvent arg0) {
 				//open file chooser
-				String defaultdir = "config/";
+				String defaultdir = "./";
 				JFileChooser fc = new JFileChooser(defaultdir);
 				int returnVal =fc.showOpenDialog(selectCalibgcfileB);
 				if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -1683,7 +1683,7 @@ public class TemCalGUI{
 
 			public void actionPerformed(ActionEvent arg0) {
 				//open file chooser
-				String defaultdir = "config/";
+				String defaultdir = "./";
 				JFileChooser fc = new JFileChooser(defaultdir);
 				int returnVal =fc.showOpenDialog(selectInitparfileB);
 				if (returnVal == JFileChooser.APPROVE_OPTION) {

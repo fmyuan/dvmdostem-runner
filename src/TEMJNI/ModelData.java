@@ -183,6 +183,14 @@ public class ModelData {
     return temcoreJNI.ModelData_initmode_get(swigCPtr, this);
   }
 
+  public void setTimestep(int value) {
+    temcoreJNI.ModelData_timestep_set(swigCPtr, this, value);
+  }
+
+  public int getTimestep() {
+    return temcoreJNI.ModelData_timestep_get(swigCPtr, this);
+  }
+
   public void setCasename(String value) {
     temcoreJNI.ModelData_casename_set(swigCPtr, this, value);
   }

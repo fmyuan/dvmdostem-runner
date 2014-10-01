@@ -39,10 +39,6 @@ public class FirData {
     this(temcoreJNI.new_FirData(), true);
   }
 
-  public void clear() {
-    temcoreJNI.FirData_clear(swigCPtr, this);
-  }
-
   public void setUseseverity(boolean value) {
     temcoreJNI.FirData_useseverity_set(swigCPtr, this, value);
   }
@@ -96,20 +92,12 @@ public class FirData {
     return (cPtr == 0) ? null : new atm2soi_fir(cPtr, false);
   }
 
-  public void init() {
-    temcoreJNI.FirData_init(swigCPtr, this);
+  public void clear() {
+    temcoreJNI.FirData_clear(swigCPtr, this);
   }
 
   public void beginOfYear() {
     temcoreJNI.FirData_beginOfYear(swigCPtr, this);
-  }
-
-  public void endOfYear() {
-    temcoreJNI.FirData_endOfYear(swigCPtr, this);
-  }
-
-  public void burn() {
-    temcoreJNI.FirData_burn(swigCPtr, this);
   }
 
 }

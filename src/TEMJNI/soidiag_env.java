@@ -35,38 +35,6 @@ public class soidiag_env {
     }
   }
 
-  public void setPermafrost(int value) {
-    temcoreJNI.soidiag_env_permafrost_set(swigCPtr, this, value);
-  }
-
-  public int getPermafrost() {
-    return temcoreJNI.soidiag_env_permafrost_get(swigCPtr, this);
-  }
-
-  public void setUnfrzcolumn(double value) {
-    temcoreJNI.soidiag_env_unfrzcolumn_set(swigCPtr, this, value);
-  }
-
-  public double getUnfrzcolumn() {
-    return temcoreJNI.soidiag_env_unfrzcolumn_get(swigCPtr, this);
-  }
-
-  public void setAlc(double value) {
-    temcoreJNI.soidiag_env_alc_set(swigCPtr, this, value);
-  }
-
-  public double getAlc() {
-    return temcoreJNI.soidiag_env_alc_get(swigCPtr, this);
-  }
-
-  public void setAld(double value) {
-    temcoreJNI.soidiag_env_ald_set(swigCPtr, this, value);
-  }
-
-  public double getAld() {
-    return temcoreJNI.soidiag_env_ald_get(swigCPtr, this);
-  }
-
   public void setRtdpts(double value) {
     temcoreJNI.soidiag_env_rtdpts_set(swigCPtr, this, value);
   }
@@ -385,6 +353,14 @@ public class soidiag_env {
 
   public double getHkminec() {
     return temcoreJNI.soidiag_env_hkminec_get(swigCPtr, this);
+  }
+
+  public void setUnfrzcolumn(double value) {
+    temcoreJNI.soidiag_env_unfrzcolumn_set(swigCPtr, this, value);
+  }
+
+  public double getUnfrzcolumn() {
+    return temcoreJNI.soidiag_env_unfrzcolumn_get(swigCPtr, this);
   }
 
   public soidiag_env() {

@@ -13,6 +13,7 @@ import TEMJNI.ModelData;
 
 public class RegionInputer {
 	
+	int act_co2yr;
 	Array co2yearA;
 	Array co2A;
 			
@@ -38,6 +39,7 @@ public class RegionInputer {
 
 				Variable var1 = ncfile.findVariable("YEAR");
 				co2yearA = var1.read();
+				act_co2yr = (int)co2yearA.getSize();
 
 				Variable var2 = ncfile.findVariable("CO2");
 				co2A = var2.read();
@@ -45,7 +47,7 @@ public class RegionInputer {
 			} catch (IOException ioe) {
 				System.out.println(ioe.getMessage());
 			} finally {
-				if (ncfile != null) {
+				if (null != ncfile) {
 					try {
 						ncfile.close();
 					} catch (IOException ioee) {

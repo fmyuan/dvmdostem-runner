@@ -47,36 +47,12 @@ public class OutDataRegn {
     return temcoreJNI.OutDataRegn_chtid_get(swigCPtr, this);
   }
 
-  public void setStatus(int[] value) {
-    temcoreJNI.OutDataRegn_status_set(swigCPtr, this, value);
-  }
-
-  public int[] getStatus() {
-    return temcoreJNI.OutDataRegn_status_get(swigCPtr, this);
-  }
-
   public void setYear(int value) {
     temcoreJNI.OutDataRegn_year_set(swigCPtr, this, value);
   }
 
   public int getYear() {
     return temcoreJNI.OutDataRegn_year_get(swigCPtr, this);
-  }
-
-  public void setMonth(int[] value) {
-    temcoreJNI.OutDataRegn_month_set(swigCPtr, this, value);
-  }
-
-  public int[] getMonth() {
-    return temcoreJNI.OutDataRegn_month_get(swigCPtr, this);
-  }
-
-  public void setDoy(int[] value) {
-    temcoreJNI.OutDataRegn_doy_set(swigCPtr, this, value);
-  }
-
-  public int[] getDoy() {
-    return temcoreJNI.OutDataRegn_doy_get(swigCPtr, this);
   }
 
   public void setYrsdist(int value) {
@@ -95,703 +71,727 @@ public class OutDataRegn {
     return temcoreJNI.OutDataRegn_outvarlist_get(swigCPtr, this);
   }
 
-  public void setGrowstart(SWIGTYPE_p_a_NUM_PFT__int value) {
-    temcoreJNI.OutDataRegn_growstart_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__int.getCPtr(value));
+  public void setStatus(SWIGTYPE_p_vectorT_int_t value) {
+    temcoreJNI.OutDataRegn_status_set(swigCPtr, this, SWIGTYPE_p_vectorT_int_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__int getGrowstart() {
+  public SWIGTYPE_p_vectorT_int_t getStatus() {
+    return new SWIGTYPE_p_vectorT_int_t(temcoreJNI.OutDataRegn_status_get(swigCPtr, this), true);
+  }
+
+  public void setMonth(SWIGTYPE_p_vectorT_int_t value) {
+    temcoreJNI.OutDataRegn_month_set(swigCPtr, this, SWIGTYPE_p_vectorT_int_t.getCPtr(value));
+  }
+
+  public SWIGTYPE_p_vectorT_int_t getMonth() {
+    return new SWIGTYPE_p_vectorT_int_t(temcoreJNI.OutDataRegn_month_get(swigCPtr, this), true);
+  }
+
+  public void setDoy(SWIGTYPE_p_vectorT_int_t value) {
+    temcoreJNI.OutDataRegn_doy_set(swigCPtr, this, SWIGTYPE_p_vectorT_int_t.getCPtr(value));
+  }
+
+  public SWIGTYPE_p_vectorT_int_t getDoy() {
+    return new SWIGTYPE_p_vectorT_int_t(temcoreJNI.OutDataRegn_doy_get(swigCPtr, this), true);
+  }
+
+  public void setGrowstart(SWIGTYPE_p_vectorT_int_t value) {
+    temcoreJNI.OutDataRegn_growstart_set(swigCPtr, this, SWIGTYPE_p_vectorT_int_t.getCPtr(value));
+  }
+
+  public SWIGTYPE_p_vectorT_int_t getGrowstart() {
     long cPtr = temcoreJNI.OutDataRegn_growstart_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__int(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_int_t(cPtr, false);
   }
 
-  public void setGrowend(SWIGTYPE_p_a_NUM_PFT__int value) {
-    temcoreJNI.OutDataRegn_growend_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__int.getCPtr(value));
+  public void setGrowend(SWIGTYPE_p_vectorT_int_t value) {
+    temcoreJNI.OutDataRegn_growend_set(swigCPtr, this, SWIGTYPE_p_vectorT_int_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__int getGrowend() {
+  public SWIGTYPE_p_vectorT_int_t getGrowend() {
     long cPtr = temcoreJNI.OutDataRegn_growend_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__int(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_int_t(cPtr, false);
   }
 
-  public void setVegcov(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_vegcov_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setVegcov(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_vegcov_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getVegcov() {
+  public SWIGTYPE_p_vectorT_double_t getVegcov() {
     long cPtr = temcoreJNI.OutDataRegn_vegcov_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setVegage(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_vegage_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setVegage(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_vegage_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getVegage() {
+  public SWIGTYPE_p_vectorT_double_t getVegage() {
     long cPtr = temcoreJNI.OutDataRegn_vegage_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setLai(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_lai_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setLai(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_lai_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getLai() {
+  public SWIGTYPE_p_vectorT_double_t getLai() {
     long cPtr = temcoreJNI.OutDataRegn_lai_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setVegc(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_vegc_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setVegc(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_vegc_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getVegc() {
+  public SWIGTYPE_p_vectorT_double_t getVegc() {
     long cPtr = temcoreJNI.OutDataRegn_vegc_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setLeafc(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_leafc_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setLeafc(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_leafc_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getLeafc() {
+  public SWIGTYPE_p_vectorT_double_t getLeafc() {
     long cPtr = temcoreJNI.OutDataRegn_leafc_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setStemc(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_stemc_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setStemc(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_stemc_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getStemc() {
+  public SWIGTYPE_p_vectorT_double_t getStemc() {
     long cPtr = temcoreJNI.OutDataRegn_stemc_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setRootc(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_rootc_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setRootc(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_rootc_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getRootc() {
+  public SWIGTYPE_p_vectorT_double_t getRootc() {
     long cPtr = temcoreJNI.OutDataRegn_rootc_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setVegn(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_vegn_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setVegn(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_vegn_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getVegn() {
+  public SWIGTYPE_p_vectorT_double_t getVegn() {
     long cPtr = temcoreJNI.OutDataRegn_vegn_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setLabn(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_labn_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setLabn(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_labn_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getLabn() {
+  public SWIGTYPE_p_vectorT_double_t getLabn() {
     long cPtr = temcoreJNI.OutDataRegn_labn_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setLeafn(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_leafn_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setLeafn(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_leafn_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getLeafn() {
+  public SWIGTYPE_p_vectorT_double_t getLeafn() {
     long cPtr = temcoreJNI.OutDataRegn_leafn_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setStemn(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_stemn_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setStemn(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_stemn_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getStemn() {
+  public SWIGTYPE_p_vectorT_double_t getStemn() {
     long cPtr = temcoreJNI.OutDataRegn_stemn_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setRootn(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_rootn_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setRootn(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_rootn_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getRootn() {
+  public SWIGTYPE_p_vectorT_double_t getRootn() {
     long cPtr = temcoreJNI.OutDataRegn_rootn_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setGpp(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_gpp_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setGpp(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_gpp_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getGpp() {
+  public SWIGTYPE_p_vectorT_double_t getGpp() {
     long cPtr = temcoreJNI.OutDataRegn_gpp_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setNpp(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_npp_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setNpp(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_npp_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getNpp() {
+  public SWIGTYPE_p_vectorT_double_t getNpp() {
     long cPtr = temcoreJNI.OutDataRegn_npp_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setLtrfalc(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_ltrfalc_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setLtrfalc(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_ltrfalc_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getLtrfalc() {
+  public SWIGTYPE_p_vectorT_double_t getLtrfalc() {
     long cPtr = temcoreJNI.OutDataRegn_ltrfalc_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setLtrfaln(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_ltrfaln_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setLtrfaln(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_ltrfaln_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getLtrfaln() {
+  public SWIGTYPE_p_vectorT_double_t getLtrfaln() {
     long cPtr = temcoreJNI.OutDataRegn_ltrfaln_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setNuptake(SWIGTYPE_p_a_NUM_PFT__double value) {
-    temcoreJNI.OutDataRegn_nuptake_set(swigCPtr, this, SWIGTYPE_p_a_NUM_PFT__double.getCPtr(value));
+  public void setNuptake(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_nuptake_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_a_NUM_PFT__double getNuptake() {
+  public SWIGTYPE_p_vectorT_double_t getNuptake() {
     long cPtr = temcoreJNI.OutDataRegn_nuptake_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_a_NUM_PFT__double(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_vectorT_double_t(cPtr, false);
   }
 
-  public void setPermafrost(int[] value) {
-    temcoreJNI.OutDataRegn_permafrost_set(swigCPtr, this, value);
+  public void setPermafrost(SWIGTYPE_p_vectorT_int_t value) {
+    temcoreJNI.OutDataRegn_permafrost_set(swigCPtr, this, SWIGTYPE_p_vectorT_int_t.getCPtr(value));
   }
 
-  public int[] getPermafrost() {
-    return temcoreJNI.OutDataRegn_permafrost_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_int_t getPermafrost() {
+    return new SWIGTYPE_p_vectorT_int_t(temcoreJNI.OutDataRegn_permafrost_get(swigCPtr, this), true);
   }
 
-  public void setMossdz(double[] value) {
-    temcoreJNI.OutDataRegn_mossdz_set(swigCPtr, this, value);
+  public void setMossdz(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_mossdz_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getMossdz() {
-    return temcoreJNI.OutDataRegn_mossdz_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getMossdz() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_mossdz_get(swigCPtr, this), true);
   }
 
-  public void setOshlwdz(double[] value) {
-    temcoreJNI.OutDataRegn_oshlwdz_set(swigCPtr, this, value);
+  public void setOshlwdz(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_oshlwdz_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getOshlwdz() {
-    return temcoreJNI.OutDataRegn_oshlwdz_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getOshlwdz() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_oshlwdz_get(swigCPtr, this), true);
   }
 
-  public void setOdeepdz(double[] value) {
-    temcoreJNI.OutDataRegn_odeepdz_set(swigCPtr, this, value);
+  public void setOdeepdz(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_odeepdz_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getOdeepdz() {
-    return temcoreJNI.OutDataRegn_odeepdz_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getOdeepdz() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_odeepdz_get(swigCPtr, this), true);
   }
 
-  public void setMineadz(double[] value) {
-    temcoreJNI.OutDataRegn_mineadz_set(swigCPtr, this, value);
+  public void setMineadz(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_mineadz_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getMineadz() {
-    return temcoreJNI.OutDataRegn_mineadz_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getMineadz() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_mineadz_get(swigCPtr, this), true);
   }
 
-  public void setMinebdz(double[] value) {
-    temcoreJNI.OutDataRegn_minebdz_set(swigCPtr, this, value);
+  public void setMinebdz(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_minebdz_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getMinebdz() {
-    return temcoreJNI.OutDataRegn_minebdz_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getMinebdz() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_minebdz_get(swigCPtr, this), true);
   }
 
-  public void setMinecdz(double[] value) {
-    temcoreJNI.OutDataRegn_minecdz_set(swigCPtr, this, value);
+  public void setMinecdz(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_minecdz_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getMinecdz() {
-    return temcoreJNI.OutDataRegn_minecdz_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getMinecdz() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_minecdz_get(swigCPtr, this), true);
   }
 
-  public void setOshlwc(double[] value) {
-    temcoreJNI.OutDataRegn_oshlwc_set(swigCPtr, this, value);
+  public void setOshlwc(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_oshlwc_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getOshlwc() {
-    return temcoreJNI.OutDataRegn_oshlwc_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getOshlwc() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_oshlwc_get(swigCPtr, this), true);
   }
 
-  public void setOdeepc(double[] value) {
-    temcoreJNI.OutDataRegn_odeepc_set(swigCPtr, this, value);
+  public void setOdeepc(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_odeepc_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getOdeepc() {
-    return temcoreJNI.OutDataRegn_odeepc_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getOdeepc() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_odeepc_get(swigCPtr, this), true);
   }
 
-  public void setMineac(double[] value) {
-    temcoreJNI.OutDataRegn_mineac_set(swigCPtr, this, value);
+  public void setMineac(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_mineac_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getMineac() {
-    return temcoreJNI.OutDataRegn_mineac_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getMineac() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_mineac_get(swigCPtr, this), true);
   }
 
-  public void setMinebc(double[] value) {
-    temcoreJNI.OutDataRegn_minebc_set(swigCPtr, this, value);
+  public void setMinebc(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_minebc_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getMinebc() {
-    return temcoreJNI.OutDataRegn_minebc_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getMinebc() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_minebc_get(swigCPtr, this), true);
   }
 
-  public void setMinecc(double[] value) {
-    temcoreJNI.OutDataRegn_minecc_set(swigCPtr, this, value);
+  public void setMinecc(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_minecc_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getMinecc() {
-    return temcoreJNI.OutDataRegn_minecc_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getMinecc() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_minecc_get(swigCPtr, this), true);
   }
 
-  public void setOrgn(double[] value) {
-    temcoreJNI.OutDataRegn_orgn_set(swigCPtr, this, value);
+  public void setOrgn(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_orgn_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getOrgn() {
-    return temcoreJNI.OutDataRegn_orgn_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getOrgn() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_orgn_get(swigCPtr, this), true);
   }
 
-  public void setAvln(double[] value) {
-    temcoreJNI.OutDataRegn_avln_set(swigCPtr, this, value);
+  public void setAvln(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_avln_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getAvln() {
-    return temcoreJNI.OutDataRegn_avln_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getAvln() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_avln_get(swigCPtr, this), true);
   }
 
-  public void setCh4(double[] value) {
-    temcoreJNI.OutDataRegn_ch4_set(swigCPtr, this, value);
+  public void setCh4(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_ch4_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getCh4() {
-    return temcoreJNI.OutDataRegn_ch4_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getCh4() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_ch4_get(swigCPtr, this), true);
   }
 
-  public void setRh(double[] value) {
-    temcoreJNI.OutDataRegn_rh_set(swigCPtr, this, value);
+  public void setRh(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_rh_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getRh() {
-    return temcoreJNI.OutDataRegn_rh_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getRh() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_rh_get(swigCPtr, this), true);
   }
 
-  public void setCh4prod(double[] value) {
-    temcoreJNI.OutDataRegn_ch4prod_set(swigCPtr, this, value);
+  public void setCh4prod(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_ch4prod_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getCh4prod() {
-    return temcoreJNI.OutDataRegn_ch4prod_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getCh4prod() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_ch4prod_get(swigCPtr, this), true);
   }
 
-  public void setCh4oxid(double[] value) {
-    temcoreJNI.OutDataRegn_ch4oxid_set(swigCPtr, this, value);
+  public void setCh4oxid(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_ch4oxid_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getCh4oxid() {
-    return temcoreJNI.OutDataRegn_ch4oxid_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getCh4oxid() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_ch4oxid_get(swigCPtr, this), true);
   }
 
-  public void setCh4flux(double[] value) {
-    temcoreJNI.OutDataRegn_ch4flux_set(swigCPtr, this, value);
+  public void setCh4flux(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_ch4flux_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getCh4flux() {
-    return temcoreJNI.OutDataRegn_ch4flux_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getCh4flux() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_ch4flux_get(swigCPtr, this), true);
   }
 
-  public void setCh4flux2a(double[] value) {
-    temcoreJNI.OutDataRegn_ch4flux2a_set(swigCPtr, this, value);
+  public void setCh4flux2a(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_ch4flux2a_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getCh4flux2a() {
-    return temcoreJNI.OutDataRegn_ch4flux2a_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getCh4flux2a() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_ch4flux2a_get(swigCPtr, this), true);
   }
 
-  public void setCh4flux2p(double[] value) {
-    temcoreJNI.OutDataRegn_ch4flux2p_set(swigCPtr, this, value);
+  public void setCh4flux2p(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_ch4flux2p_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getCh4flux2p() {
-    return temcoreJNI.OutDataRegn_ch4flux2p_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getCh4flux2p() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_ch4flux2p_get(swigCPtr, this), true);
   }
 
-  public void setCh4flux2b(double[] value) {
-    temcoreJNI.OutDataRegn_ch4flux2b_set(swigCPtr, this, value);
+  public void setCh4flux2b(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_ch4flux2b_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getCh4flux2b() {
-    return temcoreJNI.OutDataRegn_ch4flux2b_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getCh4flux2b() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_ch4flux2b_get(swigCPtr, this), true);
   }
 
-  public void setNetnmin(double[] value) {
-    temcoreJNI.OutDataRegn_netnmin_set(swigCPtr, this, value);
+  public void setNetnmin(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_netnmin_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getNetnmin() {
-    return temcoreJNI.OutDataRegn_netnmin_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getNetnmin() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_netnmin_get(swigCPtr, this), true);
   }
 
-  public void setOrgninput(double[] value) {
-    temcoreJNI.OutDataRegn_orgninput_set(swigCPtr, this, value);
+  public void setOrgninput(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_orgninput_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getOrgninput() {
-    return temcoreJNI.OutDataRegn_orgninput_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getOrgninput() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_orgninput_get(swigCPtr, this), true);
   }
 
-  public void setAvlninput(double[] value) {
-    temcoreJNI.OutDataRegn_avlninput_set(swigCPtr, this, value);
+  public void setAvlninput(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_avlninput_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getAvlninput() {
-    return temcoreJNI.OutDataRegn_avlninput_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getAvlninput() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_avlninput_get(swigCPtr, this), true);
   }
 
-  public void setDoclost(double[] value) {
-    temcoreJNI.OutDataRegn_doclost_set(swigCPtr, this, value);
+  public void setDoclost(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_doclost_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getDoclost() {
-    return temcoreJNI.OutDataRegn_doclost_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getDoclost() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_doclost_get(swigCPtr, this), true);
   }
 
-  public void setOrgnlost(double[] value) {
-    temcoreJNI.OutDataRegn_orgnlost_set(swigCPtr, this, value);
+  public void setOrgnlost(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_orgnlost_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getOrgnlost() {
-    return temcoreJNI.OutDataRegn_orgnlost_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getOrgnlost() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_orgnlost_get(swigCPtr, this), true);
   }
 
-  public void setAvlnlost(double[] value) {
-    temcoreJNI.OutDataRegn_avlnlost_set(swigCPtr, this, value);
+  public void setAvlnlost(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_avlnlost_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getAvlnlost() {
-    return temcoreJNI.OutDataRegn_avlnlost_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getAvlnlost() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_avlnlost_get(swigCPtr, this), true);
   }
 
-  public void setEet(double[] value) {
-    temcoreJNI.OutDataRegn_eet_set(swigCPtr, this, value);
+  public void setEet(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_eet_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getEet() {
-    return temcoreJNI.OutDataRegn_eet_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getEet() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_eet_get(swigCPtr, this), true);
   }
 
-  public void setPet(double[] value) {
-    temcoreJNI.OutDataRegn_pet_set(swigCPtr, this, value);
+  public void setPet(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_pet_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getPet() {
-    return temcoreJNI.OutDataRegn_pet_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getPet() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_pet_get(swigCPtr, this), true);
   }
 
-  public void setQinfl(double[] value) {
-    temcoreJNI.OutDataRegn_qinfl_set(swigCPtr, this, value);
+  public void setQinfl(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_qinfl_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getQinfl() {
-    return temcoreJNI.OutDataRegn_qinfl_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getQinfl() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_qinfl_get(swigCPtr, this), true);
   }
 
-  public void setQdrain(double[] value) {
-    temcoreJNI.OutDataRegn_qdrain_set(swigCPtr, this, value);
+  public void setQdrain(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_qdrain_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getQdrain() {
-    return temcoreJNI.OutDataRegn_qdrain_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getQdrain() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_qdrain_get(swigCPtr, this), true);
   }
 
-  public void setQrunoff(double[] value) {
-    temcoreJNI.OutDataRegn_qrunoff_set(swigCPtr, this, value);
+  public void setQrunoff(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_qrunoff_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getQrunoff() {
-    return temcoreJNI.OutDataRegn_qrunoff_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getQrunoff() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_qrunoff_get(swigCPtr, this), true);
   }
 
-  public void setSnwthick(double[] value) {
-    temcoreJNI.OutDataRegn_snwthick_set(swigCPtr, this, value);
+  public void setSnwthick(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_snwthick_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getSnwthick() {
-    return temcoreJNI.OutDataRegn_snwthick_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getSnwthick() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_snwthick_get(swigCPtr, this), true);
   }
 
-  public void setSwe(double[] value) {
-    temcoreJNI.OutDataRegn_swe_set(swigCPtr, this, value);
+  public void setSwe(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_swe_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getSwe() {
-    return temcoreJNI.OutDataRegn_swe_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getSwe() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_swe_get(swigCPtr, this), true);
   }
 
-  public void setWtd(double[] value) {
-    temcoreJNI.OutDataRegn_wtd_set(swigCPtr, this, value);
+  public void setWtd(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_wtd_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getWtd() {
-    return temcoreJNI.OutDataRegn_wtd_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getWtd() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_wtd_get(swigCPtr, this), true);
   }
 
-  public void setAlc(double[] value) {
-    temcoreJNI.OutDataRegn_alc_set(swigCPtr, this, value);
+  public void setAlc(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_alc_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getAlc() {
-    return temcoreJNI.OutDataRegn_alc_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getAlc() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_alc_get(swigCPtr, this), true);
   }
 
-  public void setAld(double[] value) {
-    temcoreJNI.OutDataRegn_ald_set(swigCPtr, this, value);
+  public void setAld(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_ald_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getAld() {
-    return temcoreJNI.OutDataRegn_ald_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getAld() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_ald_get(swigCPtr, this), true);
   }
 
-  public void setVwcshlw(double[] value) {
-    temcoreJNI.OutDataRegn_vwcshlw_set(swigCPtr, this, value);
+  public void setVwcshlw(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_vwcshlw_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getVwcshlw() {
-    return temcoreJNI.OutDataRegn_vwcshlw_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getVwcshlw() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_vwcshlw_get(swigCPtr, this), true);
   }
 
-  public void setVwcdeep(double[] value) {
-    temcoreJNI.OutDataRegn_vwcdeep_set(swigCPtr, this, value);
+  public void setVwcdeep(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_vwcdeep_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getVwcdeep() {
-    return temcoreJNI.OutDataRegn_vwcdeep_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getVwcdeep() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_vwcdeep_get(swigCPtr, this), true);
   }
 
-  public void setVwcminea(double[] value) {
-    temcoreJNI.OutDataRegn_vwcminea_set(swigCPtr, this, value);
+  public void setVwcminea(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_vwcminea_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getVwcminea() {
-    return temcoreJNI.OutDataRegn_vwcminea_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getVwcminea() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_vwcminea_get(swigCPtr, this), true);
   }
 
-  public void setVwcmineb(double[] value) {
-    temcoreJNI.OutDataRegn_vwcmineb_set(swigCPtr, this, value);
+  public void setVwcmineb(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_vwcmineb_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getVwcmineb() {
-    return temcoreJNI.OutDataRegn_vwcmineb_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getVwcmineb() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_vwcmineb_get(swigCPtr, this), true);
   }
 
-  public void setVwcminec(double[] value) {
-    temcoreJNI.OutDataRegn_vwcminec_set(swigCPtr, this, value);
+  public void setVwcminec(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_vwcminec_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getVwcminec() {
-    return temcoreJNI.OutDataRegn_vwcminec_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getVwcminec() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_vwcminec_get(swigCPtr, this), true);
   }
 
-  public void setTshlw(double[] value) {
-    temcoreJNI.OutDataRegn_tshlw_set(swigCPtr, this, value);
+  public void setTshlw(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_tshlw_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getTshlw() {
-    return temcoreJNI.OutDataRegn_tshlw_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getTshlw() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_tshlw_get(swigCPtr, this), true);
   }
 
-  public void setTdeep(double[] value) {
-    temcoreJNI.OutDataRegn_tdeep_set(swigCPtr, this, value);
+  public void setTdeep(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_tdeep_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getTdeep() {
-    return temcoreJNI.OutDataRegn_tdeep_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getTdeep() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_tdeep_get(swigCPtr, this), true);
   }
 
-  public void setTminea(double[] value) {
-    temcoreJNI.OutDataRegn_tminea_set(swigCPtr, this, value);
+  public void setTminea(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_tminea_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getTminea() {
-    return temcoreJNI.OutDataRegn_tminea_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getTminea() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_tminea_get(swigCPtr, this), true);
   }
 
-  public void setTmineb(double[] value) {
-    temcoreJNI.OutDataRegn_tmineb_set(swigCPtr, this, value);
+  public void setTmineb(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_tmineb_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getTmineb() {
-    return temcoreJNI.OutDataRegn_tmineb_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getTmineb() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_tmineb_get(swigCPtr, this), true);
   }
 
-  public void setTminec(double[] value) {
-    temcoreJNI.OutDataRegn_tminec_set(swigCPtr, this, value);
+  public void setTminec(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_tminec_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getTminec() {
-    return temcoreJNI.OutDataRegn_tminec_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getTminec() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_tminec_get(swigCPtr, this), true);
   }
 
-  public void setHkshlw(double[] value) {
-    temcoreJNI.OutDataRegn_hkshlw_set(swigCPtr, this, value);
+  public void setHkshlw(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_hkshlw_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getHkshlw() {
-    return temcoreJNI.OutDataRegn_hkshlw_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getHkshlw() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_hkshlw_get(swigCPtr, this), true);
   }
 
-  public void setHkdeep(double[] value) {
-    temcoreJNI.OutDataRegn_hkdeep_set(swigCPtr, this, value);
+  public void setHkdeep(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_hkdeep_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getHkdeep() {
-    return temcoreJNI.OutDataRegn_hkdeep_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getHkdeep() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_hkdeep_get(swigCPtr, this), true);
   }
 
-  public void setHkminea(double[] value) {
-    temcoreJNI.OutDataRegn_hkminea_set(swigCPtr, this, value);
+  public void setHkminea(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_hkminea_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getHkminea() {
-    return temcoreJNI.OutDataRegn_hkminea_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getHkminea() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_hkminea_get(swigCPtr, this), true);
   }
 
-  public void setHkmineb(double[] value) {
-    temcoreJNI.OutDataRegn_hkmineb_set(swigCPtr, this, value);
+  public void setHkmineb(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_hkmineb_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getHkmineb() {
-    return temcoreJNI.OutDataRegn_hkmineb_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getHkmineb() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_hkmineb_get(swigCPtr, this), true);
   }
 
-  public void setHkminec(double[] value) {
-    temcoreJNI.OutDataRegn_hkminec_set(swigCPtr, this, value);
+  public void setHkminec(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_hkminec_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getHkminec() {
-    return temcoreJNI.OutDataRegn_hkminec_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getHkminec() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_hkminec_get(swigCPtr, this), true);
   }
 
-  public void setTcshlw(double[] value) {
-    temcoreJNI.OutDataRegn_tcshlw_set(swigCPtr, this, value);
+  public void setTcshlw(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_tcshlw_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getTcshlw() {
-    return temcoreJNI.OutDataRegn_tcshlw_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getTcshlw() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_tcshlw_get(swigCPtr, this), true);
   }
 
-  public void setTcdeep(double[] value) {
-    temcoreJNI.OutDataRegn_tcdeep_set(swigCPtr, this, value);
+  public void setTcdeep(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_tcdeep_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getTcdeep() {
-    return temcoreJNI.OutDataRegn_tcdeep_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getTcdeep() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_tcdeep_get(swigCPtr, this), true);
   }
 
-  public void setTcminea(double[] value) {
-    temcoreJNI.OutDataRegn_tcminea_set(swigCPtr, this, value);
+  public void setTcminea(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_tcminea_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getTcminea() {
-    return temcoreJNI.OutDataRegn_tcminea_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getTcminea() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_tcminea_get(swigCPtr, this), true);
   }
 
-  public void setTcmineb(double[] value) {
-    temcoreJNI.OutDataRegn_tcmineb_set(swigCPtr, this, value);
+  public void setTcmineb(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_tcmineb_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getTcmineb() {
-    return temcoreJNI.OutDataRegn_tcmineb_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getTcmineb() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_tcmineb_get(swigCPtr, this), true);
   }
 
-  public void setTcminec(double[] value) {
-    temcoreJNI.OutDataRegn_tcminec_set(swigCPtr, this, value);
+  public void setTcminec(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_tcminec_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getTcminec() {
-    return temcoreJNI.OutDataRegn_tcminec_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getTcminec() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_tcminec_get(swigCPtr, this), true);
   }
 
-  public void setTbotrock(double[] value) {
-    temcoreJNI.OutDataRegn_tbotrock_set(swigCPtr, this, value);
+  public void setTbotrock(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_tbotrock_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getTbotrock() {
-    return temcoreJNI.OutDataRegn_tbotrock_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getTbotrock() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_tbotrock_get(swigCPtr, this), true);
   }
 
-  public void setBurnthick(double[] value) {
-    temcoreJNI.OutDataRegn_burnthick_set(swigCPtr, this, value);
+  public void setBurnthick(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_burnthick_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getBurnthick() {
-    return temcoreJNI.OutDataRegn_burnthick_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getBurnthick() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_burnthick_get(swigCPtr, this), true);
   }
 
-  public void setBurnsoic(double[] value) {
-    temcoreJNI.OutDataRegn_burnsoic_set(swigCPtr, this, value);
+  public void setBurnsoic(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_burnsoic_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getBurnsoic() {
-    return temcoreJNI.OutDataRegn_burnsoic_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getBurnsoic() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_burnsoic_get(swigCPtr, this), true);
   }
 
-  public void setBurnvegc(double[] value) {
-    temcoreJNI.OutDataRegn_burnvegc_set(swigCPtr, this, value);
+  public void setBurnvegc(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_burnvegc_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getBurnvegc() {
-    return temcoreJNI.OutDataRegn_burnvegc_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getBurnvegc() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_burnvegc_get(swigCPtr, this), true);
   }
 
-  public void setBurnsoin(double[] value) {
-    temcoreJNI.OutDataRegn_burnsoin_set(swigCPtr, this, value);
+  public void setBurnsoin(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_burnsoin_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getBurnsoin() {
-    return temcoreJNI.OutDataRegn_burnsoin_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getBurnsoin() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_burnsoin_get(swigCPtr, this), true);
   }
 
-  public void setBurnvegn(double[] value) {
-    temcoreJNI.OutDataRegn_burnvegn_set(swigCPtr, this, value);
+  public void setBurnvegn(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_burnvegn_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getBurnvegn() {
-    return temcoreJNI.OutDataRegn_burnvegn_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getBurnvegn() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_burnvegn_get(swigCPtr, this), true);
   }
 
-  public void setBurnretainc(double[] value) {
-    temcoreJNI.OutDataRegn_burnretainc_set(swigCPtr, this, value);
+  public void setBurnretainc(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_burnretainc_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getBurnretainc() {
-    return temcoreJNI.OutDataRegn_burnretainc_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getBurnretainc() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_burnretainc_get(swigCPtr, this), true);
   }
 
-  public void setBurnretainn(double[] value) {
-    temcoreJNI.OutDataRegn_burnretainn_set(swigCPtr, this, value);
+  public void setBurnretainn(SWIGTYPE_p_vectorT_double_t value) {
+    temcoreJNI.OutDataRegn_burnretainn_set(swigCPtr, this, SWIGTYPE_p_vectorT_double_t.getCPtr(value));
   }
 
-  public double[] getBurnretainn() {
-    return temcoreJNI.OutDataRegn_burnretainn_get(swigCPtr, this);
+  public SWIGTYPE_p_vectorT_double_t getBurnretainn() {
+    return new SWIGTYPE_p_vectorT_double_t(temcoreJNI.OutDataRegn_burnretainn_get(swigCPtr, this), true);
   }
 
 }

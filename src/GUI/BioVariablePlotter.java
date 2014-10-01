@@ -2,23 +2,22 @@ package GUI;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-//import java.awt.Label;
 
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
-//import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
-//import javax.swing.SpringLayout;
 
 import com.l2fprod.common.swing.JTaskPane;
 import com.l2fprod.common.swing.JTaskPaneGroup;
+
+import DATA.ConstTime;
 
 public class BioVariablePlotter {
 
 	static JFrame f;
 
-	// flux vairables at yearly time-step
+	// variables at yearly time-step
 	public PlotterMode4 ingnppTP;
 	public PlotterMode3 gnppTP;
 	public PlotterMode2 ltrfalcTP;
@@ -51,7 +50,7 @@ public class BioVariablePlotter {
 	public PlotterMode2 avlnTP;
 	public PlotterMode2 orgnTP;	
 
-	// A few flux/state vairables at monthly/daily time-step
+	// variables at monthly/daily time-step
 	public PlotterMode3 m_vcfluxTP;
 	public PlotterMode2 m_vnfluxTP;
 	
@@ -426,7 +425,7 @@ public class BioVariablePlotter {
 
 		JTaskPane leftJTP = new JTaskPane();
 		
-		m_vcfluxTP = new PlotterMode3("GPPsim", "NPPsim", "LTRFsim", 36);
+		m_vcfluxTP = new PlotterMode3("GPPsim", "NPPsim", "LTRFsim", ConstTime.DINY);
 		JPanel mvcfluxPanel = m_vcfluxTP.getPanel();
 		mvcfluxPanel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup mvcfluxTG = new JTaskPaneGroup();
@@ -436,7 +435,7 @@ public class BioVariablePlotter {
 		mvcfluxTG.add(mvcfluxPanel);
 		leftJTP.add(mvcfluxTG);
 
-		m_vegclTP = new PlotterMode1("modeled", 36);
+		m_vegclTP = new PlotterMode1("modeled", ConstTime.DINY);
 		JPanel mvegclPanel = m_vegclTP.getPanel();
 		mvegclPanel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup mvegclTG = new JTaskPaneGroup();
@@ -446,7 +445,7 @@ public class BioVariablePlotter {
 		mvegclTG.add(mvegclPanel);
 		leftJTP.add(mvegclTG);
 
-		m_vegcsTP = new PlotterMode1("modeled", 36);
+		m_vegcsTP = new PlotterMode1("modeled", ConstTime.DINY);
 		JPanel mvegcsPanel = m_vegcsTP.getPanel();
 		mvegcsPanel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup mvegcsTG = new JTaskPaneGroup();
@@ -456,7 +455,7 @@ public class BioVariablePlotter {
 		mvegcsTG.add(mvegcsPanel);
 		leftJTP.add(mvegcsTG);
 
-		m_vegcrTP = new PlotterMode1("modeled", 36);
+		m_vegcrTP = new PlotterMode1("modeled", ConstTime.DINY);
 		JPanel mvegcrPanel = m_vegcrTP.getPanel();
 		mvegcrPanel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup mvegcrTG = new JTaskPaneGroup();
@@ -522,7 +521,7 @@ public class BioVariablePlotter {
 
 		JTaskPane leftJTP = new JTaskPane();
 		
-		m_scstateTP = new PlotterMode2("tRAWC", "tSOMA", 36);
+		m_scstateTP = new PlotterMode2("tRAWC", "tSOMA", ConstTime.DINY);
 		JPanel mscstatePanel = m_scstateTP.getPanel();
 		mscstatePanel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup mscstateTG = new JTaskPaneGroup();
@@ -532,7 +531,7 @@ public class BioVariablePlotter {
 		mscstateTG.add(mscstatePanel);
 		leftJTP.add(mscstateTG);
 
-		m_ch4TP = new PlotterMode3("CH4DIFFsim", "CH4EBULsim", "CH4PLANTsim", 36);
+		m_ch4TP = new PlotterMode3("CH4DIFFsim", "CH4EBULsim", "CH4PLANTsim", ConstTime.DINY);
 		JPanel mch4Panel = m_ch4TP.getPanel();
 		mch4Panel.setPreferredSize(new Dimension(330, 125));
 		JTaskPaneGroup mch4TG = new JTaskPaneGroup();

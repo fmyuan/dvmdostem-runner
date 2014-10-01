@@ -502,30 +502,6 @@ public class EnvData {
     return (cPtr == 0) ? null : new snw2soi_env(cPtr, false);
   }
 
-  public void setMonthsfrozen(double value) {
-    temcoreJNI.EnvData_monthsfrozen_set(swigCPtr, this, value);
-  }
-
-  public double getMonthsfrozen() {
-    return temcoreJNI.EnvData_monthsfrozen_get(swigCPtr, this);
-  }
-
-  public void setRtfrozendays(int value) {
-    temcoreJNI.EnvData_rtfrozendays_set(swigCPtr, this, value);
-  }
-
-  public int getRtfrozendays() {
-    return temcoreJNI.EnvData_rtfrozendays_get(swigCPtr, this);
-  }
-
-  public void setRtunfrozendays(int value) {
-    temcoreJNI.EnvData_rtunfrozendays_set(swigCPtr, this, value);
-  }
-
-  public int getRtunfrozendays() {
-    return temcoreJNI.EnvData_rtunfrozendays_get(swigCPtr, this);
-  }
-
   public void setCd(CohortData value) {
     temcoreJNI.EnvData_cd_set(swigCPtr, this, CohortData.getCPtr(value), value);
   }
@@ -559,10 +535,6 @@ public class EnvData {
     temcoreJNI.EnvData_grnd_beginOfMonth(swigCPtr, this);
   }
 
-  public void grnd_beginOfDay() {
-    temcoreJNI.EnvData_grnd_beginOfDay(swigCPtr, this);
-  }
-
   public void atm_endOfDay(int dinm) {
     temcoreJNI.EnvData_atm_endOfDay(swigCPtr, this, dinm);
   }
@@ -579,8 +551,8 @@ public class EnvData {
     temcoreJNI.EnvData_atm_endOfMonth(swigCPtr, this);
   }
 
-  public void veg_endOfMonth(int currmind) {
-    temcoreJNI.EnvData_veg_endOfMonth(swigCPtr, this, currmind);
+  public void veg_endOfMonth() {
+    temcoreJNI.EnvData_veg_endOfMonth(swigCPtr, this);
   }
 
   public void grnd_endOfMonth() {

@@ -115,6 +115,86 @@ public class soidiag_bgc {
     return temcoreJNI.soidiag_bgc_minecc_get(swigCPtr, this);
   }
 
+  public void setShlworgn(double value) {
+    temcoreJNI.soidiag_bgc_shlworgn_set(swigCPtr, this, value);
+  }
+
+  public double getShlworgn() {
+    return temcoreJNI.soidiag_bgc_shlworgn_get(swigCPtr, this);
+  }
+
+  public void setDeeporgn(double value) {
+    temcoreJNI.soidiag_bgc_deeporgn_set(swigCPtr, this, value);
+  }
+
+  public double getDeeporgn() {
+    return temcoreJNI.soidiag_bgc_deeporgn_get(swigCPtr, this);
+  }
+
+  public void setMineaorgn(double value) {
+    temcoreJNI.soidiag_bgc_mineaorgn_set(swigCPtr, this, value);
+  }
+
+  public double getMineaorgn() {
+    return temcoreJNI.soidiag_bgc_mineaorgn_get(swigCPtr, this);
+  }
+
+  public void setMineborgn(double value) {
+    temcoreJNI.soidiag_bgc_mineborgn_set(swigCPtr, this, value);
+  }
+
+  public double getMineborgn() {
+    return temcoreJNI.soidiag_bgc_mineborgn_get(swigCPtr, this);
+  }
+
+  public void setMinecorgn(double value) {
+    temcoreJNI.soidiag_bgc_minecorgn_set(swigCPtr, this, value);
+  }
+
+  public double getMinecorgn() {
+    return temcoreJNI.soidiag_bgc_minecorgn_get(swigCPtr, this);
+  }
+
+  public void setShlwavln(double value) {
+    temcoreJNI.soidiag_bgc_shlwavln_set(swigCPtr, this, value);
+  }
+
+  public double getShlwavln() {
+    return temcoreJNI.soidiag_bgc_shlwavln_get(swigCPtr, this);
+  }
+
+  public void setDeepavln(double value) {
+    temcoreJNI.soidiag_bgc_deepavln_set(swigCPtr, this, value);
+  }
+
+  public double getDeepavln() {
+    return temcoreJNI.soidiag_bgc_deepavln_get(swigCPtr, this);
+  }
+
+  public void setMineaavln(double value) {
+    temcoreJNI.soidiag_bgc_mineaavln_set(swigCPtr, this, value);
+  }
+
+  public double getMineaavln() {
+    return temcoreJNI.soidiag_bgc_mineaavln_get(swigCPtr, this);
+  }
+
+  public void setMinebavln(double value) {
+    temcoreJNI.soidiag_bgc_minebavln_set(swigCPtr, this, value);
+  }
+
+  public double getMinebavln() {
+    return temcoreJNI.soidiag_bgc_minebavln_get(swigCPtr, this);
+  }
+
+  public void setMinecavln(double value) {
+    temcoreJNI.soidiag_bgc_minecavln_set(swigCPtr, this, value);
+  }
+
+  public double getMinecavln() {
+    return temcoreJNI.soidiag_bgc_minecavln_get(swigCPtr, this);
+  }
+
   public void setRawcsum(double value) {
     temcoreJNI.soidiag_bgc_rawcsum_set(swigCPtr, this, value);
   }
@@ -161,6 +241,14 @@ public class soidiag_bgc {
 
   public double getAvlnsum() {
     return temcoreJNI.soidiag_bgc_avlnsum_get(swigCPtr, this);
+  }
+
+  public void setCh4avg(double value) {
+    temcoreJNI.soidiag_bgc_ch4avg_set(swigCPtr, this, value);
+  }
+
+  public double getCh4avg() {
+    return temcoreJNI.soidiag_bgc_ch4avg_get(swigCPtr, this);
   }
 
   public soidiag_bgc() {
