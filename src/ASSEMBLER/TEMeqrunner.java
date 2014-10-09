@@ -179,10 +179,14 @@ public class TEMeqrunner implements Runnable{
 					int doy = ConstTime.DOYINDFST[im]+id;
 					eqrunner.runcht.cht.updateOneTimestep(yrindex, currmind, id);
 					temcj.getData1pft(ipft);			
+
 					plotting.updateDlyBioGraph(yrcnt, doy, 
 							temcj.getBd1pft(), eqrunner.runcht.cht.getBdall());
+					
 					plotting.updateDlyPhyGraph(yrcnt, doy, 
 							eqrunner.runcht.cht.getEdall());
+					
+					
 				}
 				eqrunner.runcht.cht.getTimer().advanceOneMonth();			
 				
@@ -243,8 +247,10 @@ public class TEMeqrunner implements Runnable{
 					int doy = ConstTime.DOYINDFST[im]+id;
 					eqrunner.runcht.cht.updateOneTimestep(yrindex, currmind, id);
 					temcj.getData1pft(ipft);			
+
 					plotting.updateDlyBioGraph(yrcnt, doy, temcj.getBd1pft(), 
 							eqrunner.runcht.cht.getBdall());
+
 					plotting.updateDlyPhyGraph(yrcnt, doy, eqrunner.runcht.cht.getEdall());
 				}
 				eqrunner.runcht.cht.getTimer().advanceOneMonth();			
