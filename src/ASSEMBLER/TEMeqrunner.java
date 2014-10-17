@@ -157,15 +157,21 @@ public class TEMeqrunner implements Runnable{
 			eqrunner.runcht.cht.getCd().
 				setYear(eqrunner.runcht.cht.getTimer().getCalendarYear());
 			
-			int usedatmyr = Math.min(ConstTime.MAX_ATM_DRV_YR, ConstTime.MAX_ATM_NOM_YR);
+			int usedatmyr = Math.min(ConstTime.MAX_ATM_NOM_YR, eqrunner.runcht.jcd.act_atm_drv_yr);
 			if (eqrunner.runcht.cht.getMd().getAct_clmstep() == ConstTime.DINY) { //if climate data is in daily time-step, read it yearly
 				int clmyrcount = yrindex%usedatmyr;  // this will recycle climate data series
+				float[] tair = new float[ConstTime.DINY];
+				float[] prec = new float[ConstTime.DINY];
+				float[] nirr = new float[ConstTime.DINY];
+				float[] vapo = new float[ConstTime.DINY];
 				eqrunner.runcht.cinputer.getClimate(
-						eqrunner.runcht.cht.getCd().getD_tair(), 
-						eqrunner.runcht.cht.getCd().getD_prec(), 
-						eqrunner.runcht.cht.getCd().getD_nirr(), 
-						eqrunner.runcht.cht.getCd().getD_vapo(), 
+						tair, prec, nirr, vapo,
 						clmyrcount, 1, eqrunner.runcht.clmrecno);
+				eqrunner.runcht.cht.getCd().setD_tair(tair); 
+				eqrunner.runcht.cht.getCd().setD_prec(prec); 
+				eqrunner.runcht.cht.getCd().setD_nirr(nirr); 
+				eqrunner.runcht.cht.getCd().setD_vapo(vapo); 
+				
 			}
 			eqrunner.runcht.cht.prepareDayDrivingData(yrindex, usedatmyr);
 
@@ -225,15 +231,20 @@ public class TEMeqrunner implements Runnable{
 			int yrindex = eqrunner.runcht.cht.getTimer().getCurrentYearIndex();   //starting from 0
 			eqrunner.runcht.cht.getCd().setYear(eqrunner.runcht.cht.getTimer().getCalendarYear());
 
-			int usedatmyr = Math.min(ConstTime.MAX_ATM_DRV_YR, ConstTime.MAX_ATM_NOM_YR);
+			int usedatmyr = Math.min(ConstTime.MAX_ATM_NOM_YR, eqrunner.runcht.jcd.act_atm_drv_yr);
 			if (eqrunner.runcht.cht.getMd().getAct_clmstep() == ConstTime.DINY) { //if climate data is in daily time-step, read it yearly
 				int clmyrcount = yrindex%usedatmyr;  // this will recycle climate data series
+				float[] tair = new float[ConstTime.DINY];
+				float[] prec = new float[ConstTime.DINY];
+				float[] nirr = new float[ConstTime.DINY];
+				float[] vapo = new float[ConstTime.DINY];
 				eqrunner.runcht.cinputer.getClimate(
-						eqrunner.runcht.cht.getCd().getD_tair(), 
-						eqrunner.runcht.cht.getCd().getD_prec(), 
-						eqrunner.runcht.cht.getCd().getD_nirr(), 
-						eqrunner.runcht.cht.getCd().getD_vapo(), 
+						tair, prec, nirr, vapo,
 						clmyrcount, 1, eqrunner.runcht.clmrecno);
+				eqrunner.runcht.cht.getCd().setD_tair(tair); 
+				eqrunner.runcht.cht.getCd().setD_prec(prec); 
+				eqrunner.runcht.cht.getCd().setD_nirr(nirr); 
+				eqrunner.runcht.cht.getCd().setD_vapo(vapo); 
 			}
 			eqrunner.runcht.cht.prepareDayDrivingData(yrindex, usedatmyr);
 

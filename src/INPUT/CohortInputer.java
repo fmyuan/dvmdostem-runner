@@ -393,11 +393,11 @@ public class CohortInputer {
 			int yr_beg, int yrs, int recid){     //recid starts from 0
 		
 		try {
-			int yr0 = yr_beg-this.act_clmyr_beg;
+			int yr0 = yr_beg;
 			Index ind1 = this.tairA.getIndex();
 			for (int iy = yr0; iy < yr0+yrs; iy++) {
 				for (int im = 0; im < this.act_clmstep; im++) {
-					int iyim =iy*this.act_clmstep+im;
+					int iyim =(iy-yr0)*this.act_clmstep+im;
 					tair[iyim] = this.tairA.getFloat(ind1.set(iy,im,recid));
 				}
 			}
@@ -405,7 +405,7 @@ public class CohortInputer {
 			Index ind2 = this.nirrA.getIndex();
 			for (int iy = yr0; iy < yr0+yrs; iy++) {
 				for (int im = 0; im < this.act_clmstep; im++){
-					int iyim =iy*this.act_clmstep+im;
+					int iyim =(iy-yr0)*this.act_clmstep+im;
 					nirr[iyim] = this.nirrA.getFloat(ind2.set(iy,im,recid));
 				}
 			}
@@ -413,7 +413,7 @@ public class CohortInputer {
 			Index ind3 = this.precA.getIndex();
 			for (int iy = yr0; iy < yr0+yrs; iy++) {
 				for (int im = 0; im < this.act_clmstep; im++) {
-					int iyim =iy*this.act_clmstep+im;
+					int iyim =(iy-yr0)*this.act_clmstep+im;
 					prec[iyim] = this.precA.getFloat(ind3.set(iy,im,recid));
 				}
 			}
@@ -421,7 +421,7 @@ public class CohortInputer {
 			Index ind4 = this.vapoA.getIndex();
 			for (int iy = yr0; iy < yr0+yrs; iy++) {
 				for (int im = 0; im < this.act_clmstep; im++) {
-					int iyim =iy*this.act_clmstep+im;
+					int iyim =(iy-yr0)*this.act_clmstep+im;
 					vapo[iyim] = this.vapoA.getFloat(ind4.set(iy,im,recid));
 				}
 			}

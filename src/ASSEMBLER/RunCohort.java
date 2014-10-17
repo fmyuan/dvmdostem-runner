@@ -178,7 +178,7 @@ public class RunCohort {
 		
 		if (cinputer.act_clmstep == ConstTime.MINY) {
 			error = cinputer.getClimate(jcd.tair, jcd.prec, jcd.nirr, jcd.vapo, 
-				cinputer.act_clmyr_beg, jcd.act_atm_drv_yr,	clmrecno);
+				0, jcd.act_atm_drv_yr,	clmrecno);
 	    } else if (cinputer.act_clmstep == ConstTime.DINY) { //if climate data is in daily time-step, read it yearly for calculating monthly data
 	    	float ta[] = new float[ConstTime.DINY];
 	    	float pre[] = new float[ConstTime.DINY];
@@ -430,9 +430,16 @@ public class RunCohort {
 
 			if (cht.getMd().getAct_clmstep() == ConstTime.DINY) { //if climate data is in daily time-step, read it yearly
 				int clmyrcount = yrindex%usedatmyr;  // this will recycle climate data series
-				cinputer.getClimate(cht.getCd().getD_tair(), cht.getCd().getD_prec(), 
-							        cht.getCd().getD_nirr(), cht.getCd().getD_vapo(), 
-							        clmyrcount, 1, clmrecno);
+				float[] tair = new float[ConstTime.DINY];
+				float[] prec = new float[ConstTime.DINY];
+				float[] nirr = new float[ConstTime.DINY];
+				float[] vapo = new float[ConstTime.DINY];
+				cinputer.getClimate(tair, prec, nirr, vapo,
+						clmyrcount, 1, clmrecno);
+				cht.getCd().setD_tair(tair); 
+				cht.getCd().setD_prec(prec); 
+				cht.getCd().setD_nirr(nirr); 
+				cht.getCd().setD_vapo(vapo); 
 			}
 			cht.prepareDayDrivingData(yrindex, usedatmyr);
 
