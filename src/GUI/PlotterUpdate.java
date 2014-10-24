@@ -167,11 +167,11 @@ public class PlotterUpdate {
 		
 	};
 		
-	public void updateDlyBioGraph(int yrcnt, int im, BgcData pftbd, BgcData allbd){		//update plots
+	public void updateMlyBioGraph(int yrcnt, int im, BgcData pftbd, BgcData allbd){		//update plots
 		if(BioVariablePlotter.f.isVisible()){
 			 
-			double x = (double)yrcnt+(double)im/ConstTime.DINY;
-			double y1 = 0.0, y2 = 0.0, y3 = 0.0, y4 = 0.0;
+			double x = (double)yrcnt+(double)im/ConstTime.MINY;
+			double y1 = 0.0, y2 = 0.0, y3 = 0.0;
 			 
 			// 1 pft C/N (mainly for veg)
 							
@@ -204,6 +204,71 @@ public class PlotterUpdate {
 			var1plotter.m_vegnrTP.addPoint(x, y1);
 			
 			// all pfts - for soil
+			y1 = allbd.getM_soid().getRawcsum();
+			y2 = allbd.getM_soid().getSomasum();
+			var1plotter.m_scstateTP.addPoint(x, y1, y2);
+
+			y1 = allbd.getM_soi2a().getRhtot();
+			y2 = allbd.getM_soi2a().getTotCH4Flux_m();
+			var1plotter.m_scfluxTP.addPoint(x, y1, y2);
+
+			y1 = allbd.getM_soi2a().getTotFlux2A_m();
+			y2 = allbd.getM_soi2a().getTotEbul_m();
+			y3 = allbd.getM_soi2a().getTotPlant_m();
+			var1plotter.m_ch4TP.addPoint(x, y1, y2, y3);
+
+			y1 = allbd.getM_soid().getAvlnsum();
+			var1plotter.m_snstateTP.addPoint(x, y1);
+
+			y1 = allbd.getM_soi2soi().getNetnminsum();
+			y2 = allbd.getM_soi2soi().getNimmobsum();
+			var1plotter.m_snflux1TP.addPoint(x, y1, y2);
+
+			y1 = allbd.getM_a2soi().getAvlninput();
+			y2 = allbd.getM_soi2l().getAvlnlost();
+			var1plotter.m_snflux2TP.addPoint(x, y1, y2);
+
+		}	
+	
+	};
+
+	public void updateDlyBioGraph(int yrcnt, int idoy, BgcData pftbd, BgcData allbd){		//update plots
+		if(BioVariablePlotter.f.isVisible()){
+			 
+			double x = (double)yrcnt+(double)idoy/ConstTime.DINY;
+			double y1 = 0.0, y2 = 0.0, y3 = 0.0, y4 = 0.0;
+			 
+			// 1 pft C/N (mainly for veg)
+							
+			y1 = pftbd.getD_a2v().getGppall();
+			y2 = pftbd.getD_a2v().getNppall();
+			y3 = pftbd.getD_v2soi().getLtrfalcall();
+			var1plotter.m_vcfluxTP.addPoint(x, y1, y2, y3);
+
+			y1 = pftbd.getD_vegs().getC()[0];
+			var1plotter.m_vegclTP.addPoint(x, y1);		
+			
+			y1 = pftbd.getD_vegs().getC()[1];
+			var1plotter.m_vegcsTP.addPoint(x, y1);		
+				
+			y1 = pftbd.getD_vegs().getC()[2];
+			var1plotter.m_vegcrTP.addPoint(x, y1);		
+			
+			y1 = pftbd.getD_soi2v().getSnuptakeall()+pftbd.getD_soi2v().getLnuptake();
+			y2 = pftbd.getD_v2soi().getLtrfalnall();
+			var1plotter.m_vnfluxTP.addPoint(x, y1, y2);
+
+			y1 = pftbd.getD_vegs().getLabn();
+			y2 = pftbd.getD_vegs().getStrn()[0];
+			var1plotter.m_vegnlTP.addPoint(x, y1, y2);		
+			
+			y1 = pftbd.getD_vegs().getStrn()[1];
+			var1plotter.m_vegnsTP.addPoint(x, y1);		
+				
+			y1 = pftbd.getD_vegs().getStrn()[2];
+			var1plotter.m_vegnrTP.addPoint(x, y1);
+			
+			// all pfts - for soil
 			y1 = allbd.getD_soid().getRawcsum();
 			y2 = allbd.getD_soid().getSomasum();
 			var1plotter.m_scstateTP.addPoint(x, y1, y2);
@@ -224,9 +289,9 @@ public class PlotterUpdate {
 			y2 = allbd.getD_soi2soi().getNimmobsum();
 			var1plotter.m_snflux1TP.addPoint(x, y1, y2);
 
-			y3 = allbd.getD_a2soi().getAvlninput();
-			y4 = allbd.getD_soi2l().getAvlnlost();
-			var1plotter.m_snflux2TP.addPoint(x, y3, y4);
+			y1 = allbd.getD_a2soi().getAvlninput();
+			y2 = allbd.getD_soi2l().getAvlnlost();
+			var1plotter.m_snflux2TP.addPoint(x, y1, y2);
 
 		}	
 	
@@ -261,13 +326,13 @@ public class PlotterUpdate {
 		y1 = alled.getY_soid().getTshlw();
 		y2 = alled.getY_soid().getTdeep();
 		y3 = alled.getY_soid().getTminea();
-		y3 = alled.getY_soid().getTmineb();
+		y4 = alled.getY_soid().getTmineb();
 		var2plotter.ts2TP.addPoint(x, y1, y2, y3, y4);;
 
 		y1 = alled.getY_soid().getVwcshlw();
 		y2 = alled.getY_soid().getVwcdeep();
 		y3 = alled.getY_soid().getVwcminea();
-		y3 = alled.getY_soid().getVwcmineb();
+		y4 = alled.getY_soid().getVwcmineb();
 		var2plotter.vwc2TP.addPoint(x, y1, y2, y3, y4);;
 
 		y1 = alled.getY_sois().getAld(); 
@@ -285,11 +350,67 @@ public class PlotterUpdate {
 		
 	};
 	
-	public void updateDlyPhyGraph(int yrcnt, int im, EnvData alled){		//update plots
+	public void updateMlyPhyGraph(int yrcnt, int im, EnvData alled){		//update plots
 
 		if(PhyVariablePlotter.f.isVisible()){
 
-		double x = (double)yrcnt+(double)im/ConstTime.DINY;
+		double x = (double)yrcnt+(double)im/ConstTime.MINY;
+		double y1 = 0., y2 = 0., y3 = 0.;
+		
+		//
+		y1 = alled.getM_a2l().getRnfl();
+		y2 = alled.getM_a2l().getSnfl();
+		var2plotter.mpptTP.addPoint(x, y1, y2);
+		
+		y1 = alled.getM_l2a().getPet();
+		y2 = alled.getM_l2a().getEet();
+		var2plotter.metTP.addPoint(x, y1, y2);
+
+		y1 = alled.getM_soi2l().getQover();
+		y2 = alled.getM_soi2l().getQdrain();
+		var2plotter.mqoutTP.addPoint(x, y1, y2);
+
+		y1 = alled.getM_sois().getWatertab();
+		y2 = alled.getM_sois().getDraindepth();
+		var2plotter.mwtbdrgdTP.addPoint(x, y1, y2);
+		
+		y1 = alled.getM_soid().getVwcshlw();
+		y2 = alled.getM_soid().getVwcdeep();
+		var2plotter.mvwc1TP.addPoint(x, y1, y2);
+
+		y1 = alled.getM_soid().getVwcminea();
+		y2 = alled.getM_soid().getVwcmineb();
+		y3 = alled.getM_soid().getVwcminec();
+		var2plotter.mvwc2TP.addPoint(x, y1, y2, y3);
+
+		//
+		y1 = alled.getM_a2l().getPar();
+		var2plotter.mppfdTP.addPoint(x, y1);
+
+		y1 = alled.getM_atms().getTa();
+		var2plotter.mtaTP.addPoint(x, y1);
+
+		y1 = alled.getM_sois().getAld();
+		y2 = alled.getM_sois().getAlc();
+		var2plotter.maldTP.addPoint(x, y1, y2);
+
+		y1 = alled.getM_soid().getTshlw();
+		y2 = alled.getM_soid().getTdeep();
+		var2plotter.mts1TP.addPoint(x, y1, y2);
+
+		y1 = alled.getM_soid().getTminea();
+		y2 = alled.getM_soid().getTmineb();
+		y3 = alled.getM_soid().getTminec();
+		var2plotter.mts2TP.addPoint(x, y1, y2, y3);
+		
+		}
+	};
+
+	public void updateDlyPhyGraph(int yrcnt, int idoy, EnvData alled){		//update plots
+
+		if(PhyVariablePlotter.f.isVisible()){
+
+		double x = (double)yrcnt+(double)idoy/ConstTime.DINY;
 		double y1 = 0., y2 = 0., y3 = 0.;
 		
 		//
@@ -329,7 +450,8 @@ public class PlotterUpdate {
 		y2 = alled.getD_sois().getAlc();
 		var2plotter.maldTP.addPoint(x, y1, y2);
 
-		y1 = alled.getD_soid().getTdeep();
+		y1 = alled.getD_soid().getTshlw();
+		y2 = alled.getD_soid().getTdeep();
 		var2plotter.mts1TP.addPoint(x, y1, y2);
 
 		y1 = alled.getD_soid().getTminea();
@@ -339,5 +461,5 @@ public class PlotterUpdate {
 		
 		}
 	};
-	
+
 }

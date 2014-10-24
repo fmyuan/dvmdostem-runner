@@ -186,14 +186,24 @@ public class TEMeqrunner implements Runnable{
 					eqrunner.runcht.cht.updateOneTimestep(yrindex, currmind, id);
 					temcj.getData1pft(ipft);			
 
-					plotting.updateDlyBioGraph(yrcnt, doy, 
-							temcj.getBd1pft(), eqrunner.runcht.cht.getBdall());
-					
-					plotting.updateDlyPhyGraph(yrcnt, doy, 
-							eqrunner.runcht.cht.getEdall());
-					
+					if (eqrunner.runcht.cht.getMd().getAct_clmstep() == ConstTime.DINY) {
+						plotting.updateDlyBioGraph(yrcnt, doy, temcj.getBd1pft(), 
+							eqrunner.runcht.cht.getBdall());
+
+						plotting.updateDlyPhyGraph(yrcnt, doy, eqrunner.runcht.cht.getEdall());
+
+					}				
 					
 				}
+				
+				if (eqrunner.runcht.cht.getMd().getAct_clmstep() == ConstTime.MINY) {
+					plotting.updateMlyBioGraph(yrcnt, im, temcj.getBd1pft(), 
+						eqrunner.runcht.cht.getBdall());
+
+					plotting.updateMlyPhyGraph(yrcnt, im, eqrunner.runcht.cht.getEdall());
+
+				}
+
 				eqrunner.runcht.cht.getTimer().advanceOneMonth();			
 				
 			}
@@ -236,6 +246,7 @@ public class TEMeqrunner implements Runnable{
 				int clmyrcount = yrindex%usedatmyr;  // this will recycle climate data series
 				float[] tair = new float[ConstTime.DINY];
 				float[] prec = new float[ConstTime.DINY];
+				
 				float[] nirr = new float[ConstTime.DINY];
 				float[] vapo = new float[ConstTime.DINY];
 				eqrunner.runcht.cinputer.getClimate(
@@ -259,11 +270,23 @@ public class TEMeqrunner implements Runnable{
 					eqrunner.runcht.cht.updateOneTimestep(yrindex, currmind, id);
 					temcj.getData1pft(ipft);			
 
-					plotting.updateDlyBioGraph(yrcnt, doy, temcj.getBd1pft(), 
+					if (eqrunner.runcht.cht.getMd().getAct_clmstep() == ConstTime.DINY) {
+						plotting.updateDlyBioGraph(yrcnt, doy, temcj.getBd1pft(), 
 							eqrunner.runcht.cht.getBdall());
 
-					plotting.updateDlyPhyGraph(yrcnt, doy, eqrunner.runcht.cht.getEdall());
+						plotting.updateDlyPhyGraph(yrcnt, doy, eqrunner.runcht.cht.getEdall());
+
+					}
 				}
+				
+				if (eqrunner.runcht.cht.getMd().getAct_clmstep() == ConstTime.MINY) {
+					plotting.updateMlyBioGraph(yrcnt, im, temcj.getBd1pft(), 
+						eqrunner.runcht.cht.getBdall());
+
+					plotting.updateMlyPhyGraph(yrcnt, im, eqrunner.runcht.cht.getEdall());
+
+				}
+				
 				eqrunner.runcht.cht.getTimer().advanceOneMonth();			
 				
 			}
